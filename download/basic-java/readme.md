@@ -58,6 +58,41 @@
 ![java-string-compare](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-string-compare.png)
 ![java-scanner](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-scanner.png)
 
+* 자바 연산자
+
+![java-operator](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-operator.png)
+
+* if문
+
+![java-if](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-if.png)
+
+* switch문
+
+![java-switch](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-switch.png)
+
+* for 문
+
+![java-for](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-for.png)
+
+* while문
+
+![java-while](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-while.png)
+
+* do-while문
+
+![java-do-while](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-do-while.png)
+
+* break문
+
+![java-break](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-break.png)
+
+* continue문
+
+![java-continue](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-continue.png)
+
+
+
+
 
 
 

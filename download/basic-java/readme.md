@@ -22,3 +22,10 @@
 ## 자바 개발 분야
 ![프로그래밍 언어별 개발 분야](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/develop_programming_lang.png)
 
+## JDK - java-development-kit
+![java-development-kit](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-development-kit.png)
+
+## VSCODE 개발 환경
+* 설치
+* expand (확장)
+![vscode-expand](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/vscode-expand.png)

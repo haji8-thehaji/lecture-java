@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/32775e2c-bcde-48f5-92b0-f6759c7054bf)![image](https://github.com/user-attachments/assets/bf2a4aa8-60b6-4db8-9a5c-fdc7b172b2ab)#   기본 자바 문법 학습
+#   기본 자바 문법 학습
 
 
 ## 자바가 실행되는 구조
@@ -39,5 +39,15 @@
 ## JAVA 문법
 
 * 예약어
+
 ![java-예약어](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-reservation.png)
-  
+
+* 변수
+
+![java-변수](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-variable.png)
+
+* 문자열 변환 함수
+
+![java-문자열 변환 함수](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-coverte2string.png)
+![java-문자열 변환 에러](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-convert-error.png)
+

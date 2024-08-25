@@ -51,3 +51,13 @@
 ![java-문자열 변환 함수](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-coverte2string.png)
 ![java-문자열 변환 에러](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-convert-error.png)
 
+* 자바 입출력 함수
+
+![java-입출력 함수](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-in-out.png)
+![java-printf](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-printf.png)
+![java-string-compare](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-string-compare.png)
+![java-scanner](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-scanner.png)
+
+
+
+

@@ -1,4 +1,4 @@
-#   기본 자바 문법 학습
+![image](https://github.com/user-attachments/assets/32775e2c-bcde-48f5-92b0-f6759c7054bf)![image](https://github.com/user-attachments/assets/bf2a4aa8-60b6-4db8-9a5c-fdc7b172b2ab)#   기본 자바 문법 학습
 
 
 ## 자바가 실행되는 구조
@@ -29,3 +29,15 @@
 * 설치
 * expand (확장)
 ![vscode-expand](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/vscode-expand.png)
+
+## JVM - java-virtual-machine
+
+![vscode-expand](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/jvm-java-virtual-machine.png)
+자바 가상 기계와 다양한 os에서 java를 실행하는 방법
+
+
+## JAVA 문법
+
+* 예약어
+![java-예약어](https://github.com/haji8-thehaji/lecture-java/blob/main/download/basic-java/java-reservation.png)
+  

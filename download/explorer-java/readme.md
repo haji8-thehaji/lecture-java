@@ -37,3 +37,10 @@
 ![자바 hashMap](https://github.com/haji8-thehaji/lecture-java/blob/main/download/explorer-java/java-hashMap.png)
 
 ![자바 hashTable](https://github.com/haji8-thehaji/lecture-java/blob/main/download/explorer-java/java-hashTable.png)
+
+
+## 자바 스택,큐
+
+![자바 stack-queue](https://github.com/haji8-thehaji/lecture-java/blob/main/download/explorer-java/java-stack-queue.png)
+![자바 stack](https://github.com/haji8-thehaji/lecture-java/blob/main/download/explorer-java/java-stack.png)
+![자바 queue](https://github.com/haji8-thehaji/lecture-java/blob/main/download/explorer-java/java-queue.png)

@@ -16,3 +16,15 @@
 
 
 ![자바 초기화 메서드](https://github.com/haji8-thehaji/lecture-java/blob/main/download/class-java/java-access-modifier-ex.png)
+
+
+![자바 get](https://github.com/haji8-thehaji/lecture-java/blob/main/download/class-java/java-get.png)
+
+![자바 set](https://github.com/haji8-thehaji/lecture-java/blob/main/download/class-java/java-set.png)
+
+
+---
+## 상속,인터페이스
+
+
+## super/ this

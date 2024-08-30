@@ -26,5 +26,9 @@
 ---
 ## 상속,인터페이스
 
+![자바 상속](https://github.com/haji8-thehaji/lecture-java/blob/main/download/class-java/java-Inheritance.png)
 
 ## super/ this
+![자바 super](https://github.com/haji8-thehaji/lecture-java/blob/main/download/class-java/java-super.png)
+![자바 super 예제](https://github.com/haji8-thehaji/lecture-java/blob/main/download/class-java/java-super-ex.png)
+![자바 this](https://github.com/haji8-thehaji/lecture-java/blob/main/download/class-java/java-this.png)

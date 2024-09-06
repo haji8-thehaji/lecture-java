@@ -13,7 +13,7 @@ public class Horse extends Animal{
         System.out.println(name +"의 최고속력은" + maxSpeed +"km/h 입니다.");
     }
     public void yell(){
-        System.out.println("whinny");
+        System.out.println("말이 외칩니다. whinny");
     }
     
 }

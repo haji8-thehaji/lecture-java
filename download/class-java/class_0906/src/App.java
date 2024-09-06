@@ -9,15 +9,15 @@ public class App {
 
         
         Animal a1 = new Animal("홍길동", "남자");
-        a1.printInfo();
+        // a1.printInfo();
 
         
         People p1 = new People("하지양", "여자", "한국인");
-        p1.printInfo();
+        // p1.printInfo();
 
         
         Horse h1 = new Horse("세퍼드", "남자", 20);
-        h1.printInfo();
+        // h1.printInfo();
 
         List<Animal> l1 =  new ArrayList<Animal>();
         l1.add(a1);
@@ -41,6 +41,9 @@ public class App {
             if (info instanceof People) {
                 People tempPeople = (People)info;
                 tempPeople.study();
+            }
+            if (info instanceof Horse){
+                ((Horse) info).yell();
             }
         }
     }

@@ -18,4 +18,4 @@ n..m : n ~ m개
 
 학생들은 여러 과목을 수강할 수 있고, 각 과목은 수강 신청한 학생들의 목록을 갖고 있도록 표현한 것
 
-![step5](https://github.com/haji8-thehaji/lecture-java/blob/main/download/java-designpattern/UML/step5/step5.png)
+![step5](https://github.com/haji8-thehaji/lecture-java/blob/main/download/java-designpattern/00.UML/step5/step5.png)

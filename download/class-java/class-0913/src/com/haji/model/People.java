@@ -3,7 +3,7 @@ package com.haji.model;
 public class People extends Animal{
     String nation;
 
-    People(String name, String gender, String nation) {
+    public People(String name, String gender, String nation) {
         super(name, gender);
         this.nation = nation;
     }

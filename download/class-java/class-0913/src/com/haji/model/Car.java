@@ -4,7 +4,7 @@ import com.haji.common.*;
 public class Car implements Info{
     int maxSpeed = 0;
 
-    Car(int maxSpeed){
+    public Car(int maxSpeed){
         this.maxSpeed = maxSpeed;
     }
 

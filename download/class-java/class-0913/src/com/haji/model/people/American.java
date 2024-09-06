@@ -3,7 +3,7 @@ package com.haji.model.people;
 import com.haji.common.*;
 import com.haji.model.People;/*  */
 public class American extends People implements VisaCheck{
-    String ssn;
+    public String ssn;
 
     public American(String name, String gender, String nation, String ssn) {
         super(name, gender, nation);

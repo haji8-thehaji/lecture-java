@@ -3,8 +3,8 @@ package com.haji.model;
 import com.haji.common.*;
 
 public class Animal implements Info {
-    String name;
-    String gender;
+    public String name;
+    public String gender;
     
     public Animal(String name, String gender){
         this.name = name;
@@ -19,6 +19,6 @@ public class Animal implements Info {
         System.out.println(name +"이 달립니다.");
     }
     public void eat(String something){
-        System.out.println(something +"을 먹습니다.");
+        System.out.println(name +"이 " +something +"을 먹습니다.");
     }
 }

@@ -6,5 +6,5 @@ public interface VisaCheck{
      * 결과는 성공 : 1, 실패 : 0 으로 표시됨
      * @return success
      */
-    Integer VisaCheck();
+    public Integer VisaCheck();
 }

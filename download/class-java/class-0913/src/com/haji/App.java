@@ -9,5 +9,10 @@ public class App {
         a1.eat("바나나");
         a1.run();
         a1.printInfo();
+
+        Car c1 = new Car(100);
+        c1.drive();
+        c1.printInfo();
+        
     }
 }

@@ -2,7 +2,7 @@ package com.haji.model;
 import com.haji.common.*;
 
 public class Car implements Info{
-    int maxSpeed = 0;
+    public int maxSpeed = 0;
 
     public Car(int maxSpeed){
         this.maxSpeed = maxSpeed;

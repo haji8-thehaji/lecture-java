@@ -1,7 +1,7 @@
 package com.haji.model;
 
 public class Horse extends Animal{
-    int maxSpeed;
+    public int maxSpeed;
 
     public Horse(String name, String gender, int maxSpeed) {
         super(name, gender);

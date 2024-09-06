@@ -4,7 +4,7 @@ import com.haji.common.*;
 import com.haji.model.People;
 
 public class Korean extends People implements VisaCheck {
-    String residentNumber;
+    public String residentNumber;
 
     public Korean(String residentNumber, String name, String gender, String nation) {
         super(name, gender, nation);

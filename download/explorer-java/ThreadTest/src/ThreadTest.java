@@ -1,4 +1,4 @@
-public class ThreadExample {
+public class ThreadTest {
     public static void main(String[] args) {
         Runnable r1 = new MyThread("*");
         Runnable r2 = new MyThread("!");

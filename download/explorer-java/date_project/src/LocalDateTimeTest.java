@@ -11,6 +11,5 @@ public class LocalDateTimeTest {
         String formatedNow = ldt.format(dtf);
         System.out.println(ldt);
         System.out.println(formatedNow);
-
     }
 }

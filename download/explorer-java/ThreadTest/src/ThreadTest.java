@@ -1,8 +1,8 @@
 public class ThreadTest {
     public static void main(String[] args) {
-        Runnable r1 = new MyThread("*",10);
-        Runnable r2 = new MyThread("!",100);
-        Runnable r3 = new MyThread("&",1000);
+        Runnable r1 = new MyThread("*",100);
+        Runnable r2 = new MyThread("!",1000);
+        Runnable r3 = new MyThread("&",10000);
         Thread t1 = new Thread(r1);
         Thread t2 = new Thread(r2);
         Thread t3 = new Thread(r3);

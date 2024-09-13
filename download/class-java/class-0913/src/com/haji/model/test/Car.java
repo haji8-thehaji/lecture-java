@@ -1,4 +1,4 @@
-package com.haji.model;
+package com.haji.model.test;
 import com.haji.common.*;
 
 public class Car implements Info{

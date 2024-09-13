@@ -1,5 +1,6 @@
 package com.haji;
 import com.haji.model.*;
+import com.haji.model.test.*;
 
 public class App {
     public static void main(String[] args) throws Exception {

@@ -1,7 +1,7 @@
 package com.haji.model.people;
 
 import com.haji.common.*;
-import com.haji.model.People;
+import com.haji.model.test.People;
 
 public class Korean extends People implements VisaCheck {
     public String residentNumber;

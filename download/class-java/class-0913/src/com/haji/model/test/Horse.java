@@ -1,4 +1,6 @@
-package com.haji.model;
+package com.haji.model.test;
+
+import com.haji.model.Animal;
 
 public class Horse extends Animal{
     public int maxSpeed;

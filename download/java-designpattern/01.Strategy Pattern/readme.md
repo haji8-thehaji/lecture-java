@@ -18,3 +18,10 @@
 
 참고 자료로는 
 * ![step4](https://github.com/haji8-thehaji/lecture-java/blob/main/download/java-designpattern/01.Strategy%20Pattern/strategy-ex1.png)
+
+# 전략 패턴의 꽃은 추가에 반응을 빨리 할 수 있다는 장점이 있습니다.
+* ![add-robot](https://github.com/haji8-thehaji/lecture-java/blob/main/download/java-designpattern/01.Strategy%20Pattern/add-new-robot.png?raw=true)
+* 선가드를 추가해 봅시다.
+
+
+# running project 를 통해 이해하기

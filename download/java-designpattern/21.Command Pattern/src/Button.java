@@ -1,4 +1,3 @@
-package command.after1;
 
 public class Button {
 	private Command theCommand ;	

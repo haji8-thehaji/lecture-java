@@ -1,4 +1,3 @@
-package command.after1;
 
 public class LampOnCommand implements Command {
 	private Lamp theLamp;

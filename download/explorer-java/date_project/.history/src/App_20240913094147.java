@@ -17,7 +17,6 @@ public class App {
         // // 포맷팅 적용
         String formatedNow = formatter.format(now);
         System.out.println(formatedNow); 
-        
 
  
     }

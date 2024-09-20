@@ -6,5 +6,5 @@ public interface DriveState {
 	public void up_push_button(Gear gear);
 	public void down_push_button(Gear gear);
 
-    public void printRun();
+    public void print_run();
 }

@@ -19,7 +19,8 @@ public class PARKING implements DriveState {
 		System.out.println("change to - Reverse");
 		gear.setState(REVERSE.getInstance());
     }
-    public void printRun(){
+	@Override
+    public void print_run(){
 		System.out.println("stop");
 	}
 }

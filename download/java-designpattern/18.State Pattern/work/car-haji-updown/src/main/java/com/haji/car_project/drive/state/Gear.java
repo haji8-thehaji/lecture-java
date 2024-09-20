@@ -19,6 +19,6 @@ public class Gear {
 		state.down_push_button(this);
 	}
 	public void accel(){
-		state.printRun();
+		state.print_run();
 	}
 }

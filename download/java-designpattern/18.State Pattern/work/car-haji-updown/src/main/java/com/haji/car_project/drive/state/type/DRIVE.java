@@ -20,7 +20,8 @@ public class DRIVE implements DriveState {
 	public void down_push_button(Gear gear){
 		System.out.println("change to -");
     }
-    public void printRun(){
+	@Override
+    public void print_run(){
 		System.out.println("go go go");
 	}
 }

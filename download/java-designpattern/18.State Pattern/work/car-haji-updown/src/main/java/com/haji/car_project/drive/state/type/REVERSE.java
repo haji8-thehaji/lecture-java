@@ -20,7 +20,8 @@ public class REVERSE implements DriveState {
 		System.out.println("change to - DRIVE");
 		gear.setState(DRIVE.getInstance());
     }
-    public void printRun(){
+	@Override
+    public void print_run(){
 		System.out.println("go back");
 	}
 }

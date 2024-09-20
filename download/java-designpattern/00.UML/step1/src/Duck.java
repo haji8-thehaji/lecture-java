@@ -1,6 +1,7 @@
 
 public class Duck extends Animal{
-    String beakColor = "yellow";
+    public String beakColor = "yellow";
+
     Duck(int age, String gender, String beakColor){
         super(age, gender);
         this.beakColor = beakColor;
@@ -8,17 +9,21 @@ public class Duck extends Animal{
     Duck(int age, String gender){
         super(age, gender);
     }
-    void swim(){
+    public void swim(){
         System.out.println("헤엄칩니다");
     }
-    void quak(){
+    public void quak(){
         System.out.println("오리 꽥꽥");
     }
-    void introduce()
+
+    @Override
+    public void introduce(String test)
     {
-        super.introduce("오리");
+        super.introduce(test);
     }
-    void isMamal(){
+
+    @Override
+    public void isMamal(){
         System.out.println("포유류입니다.");
     }
 

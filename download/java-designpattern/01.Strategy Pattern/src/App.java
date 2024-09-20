@@ -11,5 +11,8 @@ public class App {
 
         character.setWeapon(new lky27100());
         character.attack();
+
+        character.setWeapon(new jmg123123123());
+        character.attack();
     }
 }

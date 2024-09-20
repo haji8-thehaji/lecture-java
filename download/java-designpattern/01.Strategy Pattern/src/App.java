@@ -8,5 +8,8 @@ public class App {
 
         character.setWeapon(new Sword());
         character.attack();
+
+        character.setWeapon(new lky27100());
+        character.attack();
     }
 }

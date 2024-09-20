@@ -8,7 +8,7 @@ public class ON implements LightState {
 
 	@Override
 	public void on_button_pushed(Light light) {
-		System.out.println("취침등 상태");
+		System.out.println("Light Sleeping");
 		light.setState(SLEEPING.getInstance());
 	}
 

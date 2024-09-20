@@ -10,7 +10,7 @@ public class Printer {
 	
 	public  void print(String name)  {
 		try {
-			Thread.sleep(new Random().nextInt(100));
+			Thread.sleep(new Random().nextInt(5000));
 			System.out.println(name+" is using"+this.toString());
 		} catch (InterruptedException e) {
 			e.printStackTrace();

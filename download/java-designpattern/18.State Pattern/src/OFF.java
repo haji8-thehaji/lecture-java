@@ -13,7 +13,7 @@ public class OFF implements LightState {
 	}
 	@Override
 	public void off_button_pushed(Light light) {
-		System.out.println("반응없음");
+		System.out.println("no action");
 		light.setState(OFF.getInstance());
 	}
 }

@@ -14,5 +14,8 @@ public class App {
 
         character.setWeapon(new jmg123123123());
         character.attack();
+        
+        character.setWeapon(new missile());
+        character.attack();
     }
 }

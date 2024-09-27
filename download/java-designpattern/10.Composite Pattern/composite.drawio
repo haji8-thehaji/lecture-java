@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="mT-opLCZMWNSOOU5n5ld-1" value="AbstractFile" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="130" y="50" width="140" height="248" as="geometry" />
+          <mxGeometry x="130" y="60" width="140" height="248" as="geometry" />
         </mxCell>
         <mxCell id="mT-opLCZMWNSOOU5n5ld-2" value="－ name ：String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="mT-opLCZMWNSOOU5n5ld-1">
           <mxGeometry y="30" width="140" height="30" as="geometry" />
@@ -32,7 +32,7 @@
           <mxGeometry y="218" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mT-opLCZMWNSOOU5n5ld-9" value="Client" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-30" y="350" width="200" height="190" as="geometry" />
+          <mxGeometry x="-30" y="340" width="200" height="190" as="geometry" />
         </mxCell>
         <mxCell id="mT-opLCZMWNSOOU5n5ld-10" value="+ files:&amp;nbsp;List&amp;lt;AbstractFile&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="mT-opLCZMWNSOOU5n5ld-9">
           <mxGeometry y="30" width="200" height="30" as="geometry" />
@@ -53,7 +53,7 @@
           <mxGeometry y="160" width="200" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mT-opLCZMWNSOOU5n5ld-13" value="File" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="360" width="140" height="90" as="geometry" />
+          <mxGeometry x="260" y="340" width="140" height="90" as="geometry" />
         </mxCell>
         <mxCell id="mT-opLCZMWNSOOU5n5ld-27" value="+&amp;nbsp;getSize() : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="mT-opLCZMWNSOOU5n5ld-13">
           <mxGeometry y="30" width="140" height="30" as="geometry" />

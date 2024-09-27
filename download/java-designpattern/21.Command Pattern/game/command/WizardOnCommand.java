@@ -1,13 +1,13 @@
 package command;
+import character.Wizard;
 import common.Command;
-import mode.Wizard;
 
 public class WizardOnCommand implements Command {
-	private Wizard TheMagic;
-	public WizardOnCommand(Wizard TheMagic) {
-		this.TheMagic = TheMagic ;
+	private Wizard TheWizard;
+	public WizardOnCommand(Wizard TheWizard) {
+		this.TheWizard = TheWizard ;
 	}
 	public void execute() {
-		TheMagic.iceBall();
+		TheWizard.iceBall();
 	}
 }

@@ -1,13 +1,13 @@
 package command;
+import character.Cleric;
 import common.Command;
-import mode.Cleric;
 
 public class ClericOnCommand implements Command {
-	private Cleric TheHeal;
-	public ClericOnCommand(Cleric TheHeal) {
-		this.TheHeal = TheHeal ;
+	private Cleric TheCleric;
+	public ClericOnCommand(Cleric TheCleric) {
+		this.TheCleric = TheCleric ;
 	}
 	public void execute() {
-		TheHeal.heal();
+		TheCleric.heal();
 	}
 }

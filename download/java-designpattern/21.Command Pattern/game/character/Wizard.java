@@ -11,6 +11,12 @@ public class Wizard extends GameCharacter{
 	public void iceBall() {
 		System.out.println("iceBall") ;
 	}
+	public void fireBall() {
+		System.out.println("fireBall") ;
+	}
+	public void mudWall() {
+		System.out.println("mudWall") ;
+	}
 	@Override
 	public void attack() {
 		System.out.println(" attack2");

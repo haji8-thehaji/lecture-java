@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>램프 List</title>
+</head>
+<body>
+<h1>램프 List</h1>
+<br/>
+<div>
+   <table border="1">
+      <tr>
+         <th>램프 ID</th>
+         <th>상태</th>
+      </tr>
+      <tr th:each ="lemp : ${allLemps}">
+         <td th:text="${lemp.lempId}"></a></td>
+         <td th:text="${lemp.state}"></td>
+         <td>
+            <a th:href="@{/push_on/{id}(id=${lemp.lempId})}" >ON</a>, 
+            <a th:href="@{/push_off/{id}(id=${lemp.lempId})}" >OFF</a>, 
+        </td>  
+        <td th:text="${lemp.lempState}"></td>
+        <td><img th:src="${lemp.getImage}" width="60"></img></td>
+        
+        
+        <!--td>
+            <img th:if="${lemp.lempState=='-ON-'}" src="./lemp_on.png" width="120"/>
+            <h5 th:if="${lemp.lempState=='-OFF-'}"><img src="./lemp_off.png" width="120"></h5>
+        </td-->
+
+         
+    
+    
+<!--
+         a th:href="@{/viewLemp/{id}(id=${lemp.lempId})}" 
+         <td>
+         	<a th:href="@{/updateViewBook/{id}(id=${book.bookId})}" >수정</a>, 
+  	        <a th:href="@{/deleteBook/{id}(id=${book.bookId})}" >삭제</a>
+         </td-->
+      </tr>
+   </table>
+</div>
+<br/><br/>
+</body>
+</html>

@@ -15,5 +15,8 @@ public class Client {
 		dir1.addEntry(f4) ;
 
 		dir1.print() ;
+		dir1.description();
+		dir2.description();
+		f1.description();
 	}
 }

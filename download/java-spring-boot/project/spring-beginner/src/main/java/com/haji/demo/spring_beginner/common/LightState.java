@@ -6,4 +6,5 @@ public interface LightState {
 	public void on_button_pushed(Lemp light);
 	public void off_button_pushed(Lemp light);
     public String getString();
+    public String getImage();
 }

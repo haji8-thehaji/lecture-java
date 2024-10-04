@@ -23,4 +23,8 @@ public class OFF implements LightState {
     public String getString() {
         return "-OFF-";
     }
+    @Override
+    public String getImage() {
+        return "./lemp_off.png";
+    }
 }

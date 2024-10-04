@@ -2,7 +2,6 @@ package com.haji.demo.spring_beginner.model;
 
 import com.haji.demo.spring_beginner.common.LightState;
 import com.haji.demo.spring_beginner.common.OFF;
-import com.haji.demo.spring_beginner.common.ON;
 
 public class Lemp {
     
@@ -46,12 +45,7 @@ public class Lemp {
     }
 
     public String getImage(){
-        if (lempState == ON.getInstance()){
-            return "./lemp_on.png";
-        }
-        else{
-            return "./lemp_off.png";
-        }
+        return lempState.getImage();
     }
     
 }

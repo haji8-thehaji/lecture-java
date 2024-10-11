@@ -4,3 +4,17 @@ INSERT INTO book2(book_id,title,author,publisher,release_date,isbn) VALUES('1003
 INSERT INTO book2(book_id,title,author,publisher,release_date,isbn) VALUES('10041','블랙아테나 1','마틴 버낼','소나무','20060110','9788971395479');
 INSERT INTO book2(book_id,title,author,publisher,release_date,isbn) VALUES('10051','판다의 엄지','스티븐 제이 굴드','사이언스북스','20160520','9788983717788');
 INSERT INTO book2(book_id,title,author,publisher,release_date,isbn) VALUES('10061','이기적 유전자','리처드 도킨스','을유문화사','20181020','9788932473901');
+
+INSERT INTO lemp(id,state) VALUES('1','on');
+INSERT INTO lemp(id,state) VALUES('2','on');
+INSERT INTO lemp(id,state) VALUES('3','on');
+INSERT INTO lemp(id,state) VALUES('4','off');
+INSERT INTO lemp(id,state) VALUES('5','on');
+INSERT INTO lemp(id,state) VALUES('6','on');
+INSERT INTO lemp(id,state) VALUES('7','on');
+INSERT INTO lemp(id,state) VALUES('8','off');
+INSERT INTO lemp(id,state) VALUES('9','on');
+INSERT INTO lemp(id,state) VALUES('10','on');
+INSERT INTO lemp(id,state) VALUES('11','on');
+INSERT INTO lemp(id,state) VALUES('12','off');
+INSERT INTO lemp(id,state) VALUES('13','on');

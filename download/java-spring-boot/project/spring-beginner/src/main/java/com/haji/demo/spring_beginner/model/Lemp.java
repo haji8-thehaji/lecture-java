@@ -4,14 +4,17 @@ import com.haji.demo.spring_beginner.common.LightState;
 import com.haji.demo.spring_beginner.common.OFF;
 
 public class Lemp {
-    
 	private String lempId;
-	private String state;
+	private String sec_state;
+
+
+    
+
 	private LightState lempState = OFF.getInstance();
 
     public Lemp(String lempId, String state, LightState lempState) {
         this.lempId = lempId;
-        this.state = state;
+        this.sec_state = state;
         this.lempState = lempState;
     }
 	public void on_button_pushed() {
@@ -22,11 +25,11 @@ public class Lemp {
 	}
 
     public String getState() {
-        return state;
+        return sec_state;
     }
 
     public void setState(String state) {
-        this.state = state;
+        this.sec_state = state;
     }
 
     public String getLempId() {

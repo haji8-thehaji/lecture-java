@@ -12,11 +12,8 @@ import com.haji.demo.thymeleaf_test.repository.BookRepository;
 
 @Service
 public class Book2Service {
-	
-	private final BookRepository bookRepository;
-	public Book2Service(BookRepository bookRepository) {
-		this.bookRepository = bookRepository;
-	}
+	@Autowired
+	BookRepository bookRepository;
 	
     // @Autowired
 	// private final BookRepository bookRepository;

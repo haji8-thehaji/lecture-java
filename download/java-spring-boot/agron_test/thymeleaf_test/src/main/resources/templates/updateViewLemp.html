@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Update a Lemp</title>
+</head>
+<body>
+<h1>Update a Lemp</h1>
+<form th:action="@{/updateLemp/{id}(id=${lemp.id})}" method="POST" >
+<div>
+	<label>Lemp ID :</label>
+	<span th:text="${lemp.id}"></span>
+	<input type="hidden" th:field="*{lemp.id}" >
+</div>
+<div>
+	<label>state  </label>
+	<input type="text" th:field="*{lemp.state}" >
+</div>
+<div>
+	<p><br></p>
+	<input type="submit" id="addNew" value="Submit">
+</div>
+</form>
+<p><br></p>
+<p><a href="/">Main</a></p>
+</body>
+</html>

@@ -1,0 +1,13 @@
+INSERT INTO lemp(id,lemp_state) VALUES('1','on');
+INSERT INTO lemp(id,lsemp_state) VALUES('2','on');
+INSERT INTO lemp(id,lemp_state) VALUES('3','on');
+INSERT INTO lemp(id,lemp_state) VALUES('4','off');
+-- INSERT INTO lemp(id,lemp_state) VALUES('5','on');
+-- INSERT INTO lemp(id,lemp_state) VALUES('6','on');
+-- INSERT INTO lemp(id,lemp_state) VALUES('7','on');
+-- INSERT INTO lemp(id,lemp_state) VALUES('8','off');
+-- INSERT INTO lemp(id,lemp_state) VALUES('9','on');
+-- INSERT INTO lemp(id,lemp_state) VALUES('10','on');
+-- INSERT INTO lemp(id,lemp_state) VALUES('11','on');
+-- INSERT INTO lemp(id,lemp_state) VALUES('12','off');
+-- INSERT INTO lemp(id,lemp_state) VALUES('13','on');

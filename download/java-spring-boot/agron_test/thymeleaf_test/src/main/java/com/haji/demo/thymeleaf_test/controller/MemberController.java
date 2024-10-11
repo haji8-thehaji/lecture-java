@@ -16,5 +16,10 @@ public class MemberController {
 	public String member_haji(Model model) {
         return "member/main_haji";
 	}
+	
+	@GetMapping("/m/3")
+	public String member_isaga(Model model) {
+        return "member/isaga";
+	}
 
 }

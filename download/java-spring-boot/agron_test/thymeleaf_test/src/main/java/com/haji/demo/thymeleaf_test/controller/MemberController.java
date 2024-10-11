@@ -24,5 +24,9 @@ public class MemberController {
 	public String member_boram(Model model) {
         return "member/main_boram";
 	}
+	@GetMapping("/m4")
+	public String member_2710(Model model) {
+        return "member/main_2710";
+	}
 
 }

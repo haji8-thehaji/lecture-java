@@ -35,5 +35,9 @@ public class MemberController {
 	public String member_2710(Model model) {
         return "member/main_2710";
 	}
+	@GetMapping("/m6")
+	public String member_jmg(Model model) {
+        return "member/main_jmg";
+	}
 
 }

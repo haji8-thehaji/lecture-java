@@ -7,12 +7,14 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
+
 @Entity
 @Table(name="lemp")
 public class Lemp{
 	
 	@Id
 	@Column(name="id")
+
     @Getter
     @Setter
 	private String id;

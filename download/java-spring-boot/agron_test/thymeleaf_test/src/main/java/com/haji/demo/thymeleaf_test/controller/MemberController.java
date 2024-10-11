@@ -12,14 +12,28 @@ public class MemberController {
     //     return "index.html";
 	// }
 	
-	@GetMapping("/test2")
+	@GetMapping("/m1")
 	public String member_haji(Model model) {
         return "member/main_haji";
 	}
+
 	
-	@GetMapping("/m/3")
+	@GetMapping("/m5")
 	public String member_isaga(Model model) {
         return "member/isaga";
+	}
+
+	@GetMapping("/m2")
+	public String member_choi(Model model) {
+        return "member/main_choi";
+	}
+	@GetMapping("/m3")
+	public String member_boram(Model model) {
+        return "member/main_boram";
+	}
+	@GetMapping("/m4")
+	public String member_2710(Model model) {
+        return "member/main_2710";
 	}
 
 }

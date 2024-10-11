@@ -6,7 +6,7 @@
 
 ![Light-2state.png](https://github.com/haji8-thehaji/lecture-java/blob/main/download/java-designpattern/18.State%20Pattern/Light-2state.png?raw=true)
 
-이럴때 ON, OFF 의 State를 만들어 state가 On 일때는 Off 객체를 매핑하고 Off일때는 On 객체를 매핑하여 해결할 수 있다.
+이럴때 ON, OFF 의 State를 만들어 state가 On 일때는 Off 객체를 매핑하고 Off일때는 On 객체를 매핑하여 해결할 수 있다.asd
 
 이후 상태가 하나 더 추가되어 sleeping mode (취침등) 이 생겼을 때도 쉽게 확장이 가능하다
 

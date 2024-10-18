@@ -18,9 +18,9 @@ public class BoardHajiController {
 
 	@GetMapping("/haji")
 	public String member_haji(Model model) {
-		List<BoardHaji> boardHajiList = boardHajiService.selectSampleList();
-		model.addAttribute("boardHAjiList", boardHajiList);
-		
+		List<BoardHaji> boardHajiList = boardHajiService.getAllBoardHajis();
+		model.addAttribute("boardHajiList", boardHajiList);
+		System.out.println(boardHajiList);
         return "haji/board/main_haji";
 	}
 

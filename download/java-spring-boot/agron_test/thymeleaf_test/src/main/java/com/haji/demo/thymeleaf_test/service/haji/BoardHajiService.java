@@ -12,7 +12,7 @@ import com.haji.demo.thymeleaf_test.repository.haji.BoardHajiRepository;
 public class BoardHajiService{
     @Autowired
     private BoardHajiRepository boardHajiRepository;
-    public List<BoardHaji> selectSampleList() { 
+    public List<BoardHaji> getAllBoardHajis() { 
         return boardHajiRepository.findAll();
     } 
 }

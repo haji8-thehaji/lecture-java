@@ -13,12 +13,12 @@
          <th>ID</th>
          <th>state</th>
       </tr>
-      <tr th:each ="brd : ${boardHAjiList}">
-         <td><a th:href="@{/viewLemp/{id}(id=${brd.id})}"  th:text="${brd.id}"></a></td>
+      <tr th:each ="brd : ${boardHajiList}">
+         <td><a th:href="@{/brd/{id}(id=${brd.id})}"  th:text="${brd.id}"></a></td>
          <td th:text="${brd.name}"></td>
          <td>
-         	<a th:href="@{/updateViewLemp/{id}(id=${brd.id})}" >수정</a>, 
-  	        <a th:href="@{/deleteLemp/{id}(id=${brd.id})}" >삭제</a>
+         	<a th:href="@{/updateViewBrd/{id}(id=${brd.id})}" >수정</a>, 
+  	        <a th:href="@{/deleteBrd/{id}(id=${brd.id})}" >삭제</a>
          </td>
       </tr>
    </table>

@@ -1,30 +1,30 @@
 package com.haji.demo.thymeleaf_test.model.haji;
 
+import java.util.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="boardHaji")
+@Data
+@Table(name="board")
 public class BoardHaji{ 
 
     /** 아이디 */
 	@Id
-    @Getter
-    @Setter
     private String id;
     /** 이름 */
-    @Getter
-    @Setter
     private String name;
-	// public BoardHaji() {}
-	// public BoardHaji(String id, String name) {
-    //     this.id = id;
-    //     this.name = name;
-    // }
+    private String content;
+    @Temporal(TemporalType.TIMESTAMP) // 날짜 형식 설정
+    private Date created_at;
+    private int views;
+
 }

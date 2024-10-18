@@ -46,7 +46,7 @@
          <th>ID</th>
          <th>name</th>
       </tr>
-      <tr th:each ="brd : ${boardHajiList}">
+      <tr th:each ="brd : ${boardList x   }">
          <td><a th:href="@{/brd/{id}(id=${brd.id})}"  th:utext="|${brd.id}|"></a></td>
          <td th:utext="|${brd.name}|"></td>
          <td>

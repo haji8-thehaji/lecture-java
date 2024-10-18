@@ -1,1 +1,29 @@
-haji
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>boardHaji List</title>
+</head>
+<body>
+<h1>boardHaji List</h1>
+<br/>
+<div>
+   <table border="1">
+      <tr>
+         <th>ID</th>
+         <th>state</th>
+      </tr>
+      <tr th:each ="brd : ${boardHAjiList}">
+         <td><a th:href="@{/viewLemp/{id}(id=${brd.id})}"  th:text="${brd.id}"></a></td>
+         <td th:text="${brd.name}"></td>
+         <td>
+         	<a th:href="@{/updateViewLemp/{id}(id=${brd.id})}" >수정</a>, 
+  	        <a th:href="@{/deleteLemp/{id}(id=${brd.id})}" >삭제</a>
+         </td>
+      </tr>
+   </table>
+</div>
+<br/><br/>
+<a href="/">Main Page</a>
+</body>
+</html>

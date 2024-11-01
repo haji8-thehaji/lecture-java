@@ -1,5 +1,6 @@
 DROP TABLE book2 IF EXISTS;
 DROP TABLE lemp IF EXISTS;
+DROP TABLE isaga IF EXISTS;
 
 CREATE TABLE book2 (
   book_id VARCHAR(5),
@@ -13,4 +14,8 @@ CREATE TABLE book2 (
 CREATE TABLE lemp (
   id VARCHAR(5),
   state VARCHAR(40)
+);
+CREATE TABLE isaga (
+  id VARCHAR(5),
+  name VARCHAR(40)
 );

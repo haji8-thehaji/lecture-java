@@ -46,3 +46,34 @@ INSERT INTO board (id, name, content, created_at, views) VALUES ('17', '열일�
 INSERT INTO board (id, name, content, created_at, views) VALUES ('18', '열여덟 번째 게시글', '요즘 즐겨 듣는 음악이 있나요?', NOW() - INTERVAL 17 DAY, 16);
 INSERT INTO board (id, name, content, created_at, views) VALUES ('19', '열아홉 번째 게시글', '오늘 하루 어땠나요? 나눠주세요!', NOW() - INTERVAL 18 DAY, 1);
 INSERT INTO board (id, name, content, created_at, views) VALUES ('20', '스무 번째 게시글', '다음 모임에 대한 계획을 세워봅시다.', NOW() - INTERVAL 19 DAY, 17);
+
+
+INSERT INTO `USER` (id) VALUES (1);
+INSERT INTO `USER` (id) VALUES (2);
+INSERT INTO `USER` (id) VALUES (3);
+INSERT INTO `USER` (id) VALUES (4);
+
+INSERT INTO `MEMO` (id, memo, created_dt, deleted_dt) VALUES 
+(1, '첫 번째 메모', NOW(), NULL),
+(2, '두 번째 메모', NOW(), NULL),
+(3, '세 번째 메모', NOW(), NULL);
+
+INSERT INTO `FOOD_INFO` (id, name, standard_expire_day, standard_price, standard_volume, storage_type, custom_bool, season_spring, season_summer, season_autumn, season_winter) VALUES 
+(1, '사과', 30, 1000, '1kg', '냉장', 0, 1, 1, 0, 0),
+(2, '바나나', 7, 800, '1kg', '상온', 0, 1, 1, 0, 0),
+(3, '당근', 14, 500, '500g', '냉장', 1, 1, 0, 1, 0);
+
+INSERT INTO `RECIPE` (id, Ingredients, Steps) VALUES 
+(1, '닭고기, 소금, 후추, 마늘', '1. 닭고기에 소금과 후추로 간을 한다. 2. 마늘을 넣고 볶는다. 3. 닭고기가 익을 때까지 조리한다.'),
+(2, '파스타, 올리브 오일, 마늘, 소금', '1. 파스타를 삶는다. 2. 팬에 올리브 오일과 마늘을 볶는다. 3. 삶은 파스타를 추가하고 섞는다.'),
+(3, '감자, 버터, 소금, 후추', '1. 감자를 삶는다. 2. 삶은 감자를 으깬다. 3. 버터와 소금, 후추로 간을 한다.');
+
+INSERT INTO `FOOD_INVENTORY` (id, food_id, expire_date, volume, created_dt, deleted_dt) VALUES 
+(1, 1, '2024-12-31 00:00:00', '1kg', NOW(), NULL),
+(2, 2, '2024-11-15 00:00:00', '500g', NOW(), NULL),
+(3, 3, '2025-01-10 00:00:00', '2kg', NOW(), NULL);
+
+INSERT INTO `CART` (id, food_id, volume) VALUES 
+(1, 1, '1kg'),
+(2, 2, '500g'),
+(3, 3, '2kg');

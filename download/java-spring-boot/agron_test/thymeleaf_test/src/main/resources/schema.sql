@@ -51,12 +51,12 @@ CREATE TABLE `FOOD_INFO` (
   `season_winter` interger
 );
 
-CREATE TABLE `MEMO` (
-  `id` integer PRIMARY KEY,
-  `memo` string COMMENT 'Content of the memo',
-  `created_dt` timestamp,
-  `deleted_dt` timestamp
-);
+  CREATE TABLE `MEMO` (
+    `id` integer PRIMARY KEY,
+    `memo` string COMMENT 'Content of the memo',
+    `created_dt` timestamp,
+    `deleted_dt` timestamp
+  );
 
 CREATE TABLE `RECIPE` (
   `id` integer PRIMARY KEY,

@@ -25,13 +25,6 @@ public class MemberController {
 	public String member_haji(Model model) {
         return "member/main_haji";
 	}
-
-	
-	@GetMapping("/m5")
-	public String member_isaga(Model model) {
-        return "member/isaga";
-	}
-
 	@GetMapping("/m2")
 	public String member_choi(Model model) {
         return "member/main_choi";
@@ -43,6 +36,10 @@ public class MemberController {
 	@GetMapping("/m4")
 	public String member_2710(Model model) {
         return "member/main_2710";
+	}
+	@GetMapping("/m5")
+	public String member_isaga(Model model) {
+        return "member/isaga";
 	}
 	@GetMapping("/m6")
 	public String member_jmg(Model model) {

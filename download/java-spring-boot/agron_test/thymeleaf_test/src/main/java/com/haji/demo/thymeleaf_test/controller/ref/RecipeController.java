@@ -22,7 +22,7 @@ public class RecipeController {
 		List<Recipe> recipeList = recipeService.getAllRecipes();
 		model.addAttribute("recipeList", recipeList);
 		System.out.println(recipeList);
-        return "haji/board/main_haji";
+        return "haji/board/recipe_haji";
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.haji.demo.thymeleaf_test.model.ref;
 
+import java.util.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -11,10 +13,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Data
-@Table(name="USER")
-public class User {
+@Table(name="FOOD_INVENTORY")
+public class FoodInventory {
     
 	@Id
 	@Column(name="id")
 	private int id;
+	private int food_id;
+    private Date expire_date;
+    private String volume;
+    private Date created_dt;
+    private Date deleted_dt;
 }

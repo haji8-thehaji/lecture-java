@@ -11,10 +11,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Data
-@Table(name="USER")
-public class User {
+@Table(name="CART")
+public class cart {
     
 	@Id
 	@Column(name="id")
 	private int id;
+	private int food_id;
+    private String volume;
 }

@@ -51,22 +51,20 @@ INSERT INTO board (id, name, content, created_at, views) VALUES ('20', '스무 �
 INSERT INTO USER (id) VALUES (1);
 INSERT INTO USER (id) VALUES (2);
 INSERT INTO USER (id) VALUES (3);
-INSERT INTO USER (id) VALUES (4);
-
-INSERT INTO MEMO (id, memo, created_dt, deleted_dt) VALUES 
-(1, '첫 번째 메모', NOW(), NULL),
-(2, '두 번째 메모', NOW(), NULL),
-(3, '세 번째 메모', NOW(), NULL);
+INSERT INTO USER (id) VALUES (4);INSERT INTO MEMO (id, memo, created_dt, deleted_dt) VALUES 
+(1, 'First memo', NOW(), NULL),
+(2, 'Second memo', NOW(), NULL),
+(3, 'Third memo', NOW(), NULL);
 
 INSERT INTO FOOD_INFO (id, name, standard_expire_day, standard_price, standard_volume, storage_type, custom_bool, season_spring, season_summer, season_autumn, season_winter) VALUES 
-(1, '사과', 30, 1000, '1kg', '냉장', 0, 1, 1, 0, 0),
-(2, '바나나', 7, 800, '1kg', '상온', 0, 1, 1, 0, 0),
-(3, '당근', 14, 500, '500g', '냉장', 1, 1, 0, 1, 0);
+(1, 'Apple', 30, 1000, '1kg', 'Refrigerated', 0, 1, 1, 0, 0),
+(2, 'Banana', 7, 800, '1kg', 'Room temperature', 0, 1, 1, 0, 0),
+(3, 'Carrot', 14, 500, '500g', 'Refrigerated', 1, 1, 0, 1, 0);
 
 INSERT INTO RECIPE (id, Ingredients, Steps) VALUES 
-(1, '닭고기, 소금, 후추, 마늘', '1. 닭고기에 소금과 후추로 간을 한다. 2. 마늘을 넣고 볶는다. 3. 닭고기가 익을 때까지 조리한다.'),
-(2, '파스타, 올리브 오일, 마늘, 소금', '1. 파스타를 삶는다. 2. 팬에 올리브 오일과 마늘을 볶는다. 3. 삶은 파스타를 추가하고 섞는다.'),
-(3, '감자, 버터, 소금, 후추', '1. 감자를 삶는다. 2. 삶은 감자를 으깬다. 3. 버터와 소금, 후추로 간을 한다.');
+(1, 'Chicken, salt, pepper, garlic', '1. Season the chicken with salt and pepper. 2. Add garlic and sauté. 3. Cook until the chicken is done.'),
+(2, 'Pasta, olive oil, garlic, salt', '1. Boil the pasta. 2. Sauté olive oil and garlic in a pan. 3. Add the boiled pasta and mix.'),
+(3, 'Potatoes, butter, salt, pepper', '1. Boil the potatoes. 2. Mash the boiled potatoes. 3. Season with butter, salt, and pepper.');
 
 INSERT INTO FOOD_INVENTORY (id, food_id, expire_date, volume, created_dt, deleted_dt) VALUES 
 (1, 1, '2024-12-31 00:00:00', '1kg', NOW(), NULL),

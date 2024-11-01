@@ -11,10 +11,20 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Data
-@Table(name="USER")
-public class User {
+@Table(name="FOOD_INFO")
+public class FoodInfo {
     
 	@Id
 	@Column(name="id")
 	private int id;
+	private String name;
+    private int standard_expire_day;
+    private int standard_price;
+    private String standard_volume;
+    private String storage_type;
+    private int custom_bool;
+    private int season_spring;
+    private int season_summer;
+    private int season_autumn;
+    private int season_winter;
 }

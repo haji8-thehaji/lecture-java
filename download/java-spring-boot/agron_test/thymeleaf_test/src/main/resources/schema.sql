@@ -37,52 +37,52 @@ CREATE TABLE board (
   views INT DEFAULT 0
 );
 
-CREATE TABLE `FOOD_INFO` (
-  `id` integer PRIMARY KEY,
-  `name` String,
-  `standard_expire_day` interger,
-  `standard_price` interger,
-  `standard_volume` string,
-  `storage_type` string,
-  `custom_bool` integer,
-  `season_spring` interger,
-  `season_summer` interger,
-  `season_autumn` interger,
-  `season_winter` interger
+CREATE TABLE FOOD_INFO (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(40),
+  standard_expire_day INTEGER,
+  standard_price INTEGER,
+  standard_volume VARCHAR(40),
+  storage_type VARCHAR(40),
+  custom_bool INTEGER,
+  season_spring INTEGER,
+  season_summer INTEGER,
+  season_autumn INTEGER,
+  season_winter INTEGER
 );
 
-  CREATE TABLE `MEMO` (
-    `id` integer PRIMARY KEY,
-    `memo` string COMMENT 'Content of the memo',
-    `created_dt` timestamp,
-    `deleted_dt` timestamp
+  CREATE TABLE MEMO (
+    id integer PRIMARY KEY,
+    memo VARCHAR(500),
+    created_dt timestamp,
+    deleted_dt timestamp
   );
 
-CREATE TABLE `RECIPE` (
-  `id` integer PRIMARY KEY,
-  `Ingredients` string,
-  `Steps` string
+CREATE TABLE RECIPE (
+  id integer PRIMARY KEY,
+  Ingredients VARCHAR(500),
+  Steps VARCHAR(500)
 );
 
-CREATE TABLE `FOOD_INVENTORY` (
-  `id` integer PRIMARY KEY,
-  `food_id` integer,
-  `expire_date` timestamp,
-  `volume` string,
-  `created_dt` timestamp,
-  `deleted_dt` timestamp
+CREATE TABLE FOOD_INVENTORY (
+  id integer PRIMARY KEY,
+  food_id integer,
+  expire_date timestamp,
+  volume VARCHAR(40),
+  created_dt timestamp,
+  deleted_dt timestamp
 );
 
-CREATE TABLE `USER` (
-  `id` integer PRIMARY KEY
+CREATE TABLE USER (
+  id integer PRIMARY KEY
 );
 
-CREATE TABLE `CART` (
-  `id` integar PRIMARY KEY,
-  `food_id` integer,
-  `volume` string
+CREATE TABLE CART (
+  id integer PRIMARY KEY,
+  food_id integer,
+  volume VARCHAR(40)
 );
 
-ALTER TABLE `FOOD_INVENTORY` ADD FOREIGN KEY (`food_id`) REFERENCES `FOOD_INFO` (`id`);
+ALTER TABLE FOOD_INVENTORY ADD FOREIGN KEY (food_id) REFERENCES FOOD_INFO (id);
 
-ALTER TABLE `CART` ADD FOREIGN KEY (`food_id`) REFERENCES `FOOD_INFO` (`id`);
+ALTER TABLE CART ADD FOREIGN KEY (food_id) REFERENCES FOOD_INFO (id);

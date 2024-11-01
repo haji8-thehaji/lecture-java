@@ -1,4 +1,4 @@
-package com.haji.demo.thymeleaf_test.controller.haji;
+package com.boram.demo.thymeleaf_test.controller.boram;
 
 import java.util.List;
 
@@ -11,17 +11,17 @@ import com.haji.demo.thymeleaf_test.model.haji.BoardHaji;
 import com.haji.demo.thymeleaf_test.service.haji.BoardHajiService;
 
 @Controller
-// @GetMapping("/haji")
+// @GetMapping("/boram")
 public class BoardHajiController {
 	@Autowired
 	BoardHajiService boardHajiService;
 
-	@GetMapping("/haji")
+	@GetMapping("/boram")
 	public String member_haji(Model model) {
 		List<BoardHaji> boardHajiList = boardHajiService.getAllBoardHajis();
 		model.addAttribute("boardHajiList", boardHajiList);
 		System.out.println(boardHajiList);
-        return "haji/board/main_haji";
+        return "boram/board/main_boram";
 	}
 
 }

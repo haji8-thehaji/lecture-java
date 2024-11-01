@@ -16,7 +16,7 @@ public class Recipe {
     
 	@Id
 	@Column(name="id")
-	private String id;
+	private int id;
 	private String Ingredients;
 	private String Steps;
 }

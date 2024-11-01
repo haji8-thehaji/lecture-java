@@ -40,6 +40,7 @@ CREATE TABLE board (
 CREATE TABLE FOOD_INFO (
   id INTEGER PRIMARY KEY,
   name VARCHAR(40),
+  image VARCHAR(40),
   standard_expire_day INTEGER,
   standard_price INTEGER,
   standard_volume VARCHAR(40),
@@ -80,7 +81,9 @@ CREATE TABLE USER (
 CREATE TABLE CART (
   id integer PRIMARY KEY,
   food_id integer,
-  volume VARCHAR(40)
+  volume VARCHAR(40),
+  count integer,
+  money integer
 );
 
 ALTER TABLE FOOD_INVENTORY ADD FOREIGN KEY (food_id) REFERENCES FOOD_INFO (id);

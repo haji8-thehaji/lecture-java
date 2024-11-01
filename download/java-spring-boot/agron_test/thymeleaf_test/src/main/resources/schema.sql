@@ -37,8 +37,13 @@ CREATE TABLE board (
   views INT DEFAULT 0
 );
 
+CREATE TABLE FOOD_CATEGORY (
+  id integer,
+  name String
+);
 CREATE TABLE FOOD_INFO (
   id INTEGER PRIMARY KEY,
+  food_category_id integer,
   name VARCHAR(40),
   image VARCHAR(40),
   standard_expire_day INTEGER,

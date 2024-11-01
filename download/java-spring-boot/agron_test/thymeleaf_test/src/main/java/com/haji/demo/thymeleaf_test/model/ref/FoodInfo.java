@@ -17,6 +17,7 @@ public class FoodInfo {
 	@Id
 	@Column(name="id")
 	private int id;
+	private int food_category_id;
 	private String name;
     private int standard_expire_day;
     private int standard_price;

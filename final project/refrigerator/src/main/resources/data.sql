@@ -36,8 +36,8 @@ VALUES
 
 
 INSERT INTO RECIPE (id, Ingredients, Steps) VALUES 
-(1, 'Chicken, salt, pepper, garlic', '1. Season the chicken with salt and pepper. 2. Add garlic and sauté. 3. Cook until the chicken is done.'),
-(2, 'Pasta, olive oil, garlic, salt', '1. Boil the pasta. 2. Sauté olive oil and garlic in a pan. 3. Add the boiled pasta and mix.'),
+(1, 'Chicken, salt, pepper, garlic', '1. Season the chicken with salt and pepper. 2. Add garlic and saute. 3. Cook until the chicken is done.'),
+(2, 'Pasta, olive oil, garlic, salt', '1. Boil the pasta. 2. Saute olive oil and garlic in a pan. 3. Add the boiled pasta and mix.'),
 (3, 'Potatoes, butter, salt, pepper', '1. Boil the potatoes. 2. Mash the boiled potatoes. 3. Season with butter, salt, and pepper.');
 
 INSERT INTO FOOD_INVENTORY (id, food_id, expire_date, volume, created_dt, deleted_dt) VALUES 

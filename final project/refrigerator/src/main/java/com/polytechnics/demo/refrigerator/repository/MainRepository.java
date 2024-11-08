@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.polytechnics.demo.refrigerator.model.ref.User;
 
 @Repository
-public interface MainRepository extends JpaRepository<User, Long> {
-    User findByUserName(String userName);
+public interface MainRepository extends JpaRepository<User, Integer> {
+    
 }

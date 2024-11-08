@@ -20,7 +20,7 @@
               <div style="width: 381px; height: 100px; text-align: center"><span style="color: #7B62E4; font-size: 37px; font-family: Open Sans; font-weight: 600; line-height: 60.12px; word-wrap: break-word">메모장</span><span style="color: #7B62E4; font-size: 16px; font-family: Open Sans; font-weight: 600; line-height: 26px; word-wrap: break-word"> <br/></span></div>
             </div>
           </div>
-          <div style="width: 333px; height: 406.08px; left: 55px; top: 240.49px; position: absolute"><span style="color: black; font-size: 23px; font-family: Open Sans; font-weight: 600; line-height: 37.38px; word-wrap: break-word">Quest<br/></span><span style="color: black; font-size: 22px; font-family: Open Sans; font-weight: 600; line-height: 35.75px; word-wrap: break-word">국<br/>쌀밥<br/>even하게 익은 고기<br/>계란찜</span></div>
+          <div style="width: 333px; height: 406.08px; left: 55px; top: 240.49px; position: absolute"><span style="color: black; font-size: 23px; font-family: Open Sans; font-weight: 600; line-height: 37.38px; word-wrap: break-word" th:utext="${memo.memo}">메모</div>
           <div style="width: 78px; height: 52.57px; padding-left: 16px; padding-right: 16px; padding-top: 6px; padding-bottom: 6px; left: 16px; top: 728.05px; position: absolute; background: #6F42C1; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25); border-radius: 8px; justify-content: flex-start; align-items: center; gap: 4px; display: inline-flex">
             <div style="text-align: right; color: white; font-size: 12px; font-family: Open Sans; font-weight: 700; line-height: 18px; word-wrap: break-word">이전 메모</div>
           </div>
@@ -120,14 +120,8 @@
       </div>
       <div style="width: 417px; height: 792.59px; left: 1350px; top: 2px; position: absolute">
         <div style="width: 417px; height: 640.09px; left: 0px; top: 147px; position: absolute">
-          <div style="width: 391px; height: 34px; left: 2px; top: 28px; position: absolute; color: black; font-size: 22px; font-family: Open Sans; font-weight: 700; line-height: 33px; word-wrap: break-word">1 . 감자를 먹기 좋은 모양으로 잘라 줍니다.</div>
-          <div style="width: 391px; height: 34px; left: 2px; top: 276px; position: absolute; color: black; font-size: 22px; font-family: Open Sans; font-weight: 700; line-height: 33px; word-wrap: break-word">3 . 전분을 빼는 동안 꿀,소금,버터,후추를 한스푼씩 넣어서 양념을 만들어 줍니다. </div>
-          <div style="width: 391px; height: 34px; left: 0px; top: 400px; position: absolute; color: black; font-size: 22px; font-family: Open Sans; font-weight: 700; line-height: 33px; word-wrap: break-word">4 . 물에 담궈둔 감자를 꺼내 물기를 딲아 주고  만들어 두었던 양념을 골고루 묻혀줍니다.</div>
-          <div style="width: 391px; height: 34px; left: 2px; top: 152px; position: absolute; color: black; font-size: 22px; font-family: Open Sans; font-weight: 700; line-height: 33px; word-wrap: break-word">2 . 감자의 전분을 뺴기 위해 물에 20분간 담궈 둡니다.</div>
-          <img style="width: 238px; height: 73px; left: 131px; top: 71px; position: absolute; border-radius: 12px" src="https://via.placeholder.com/238x73" />
-          <img style="width: 238px; height: 73px; left: 131px; top: 194px; position: absolute; border-radius: 12px" src="https://via.placeholder.com/238x73" />
-          <img style="width: 238px; height: 73px; left: 131px; top: 334px; position: absolute; border-radius: 12px" src="https://via.placeholder.com/238x73" />
-          <img style="width: 238px; height: 73px; left: 131px; top: 491.05px; position: absolute; border-radius: 12px" src="https://via.placeholder.com/238x73" />
+            <div style="width: 391px; height: 34px; left: 2px; top: 28px; position: absolute; color: black; font-size: 22px; font-family: Open Sans; font-weight: 700; line-height: 33px; word-wrap: break-word">재료: <div: th:utext="${recipe.Ingredients}">재료</div></div>
+            <div style="width: 391px; height: 34px; left: 2px; top: 300px; position: absolute; color: black; font-size: 22px; font-family: Open Sans; font-weight: 700; line-height: 33px; word-wrap: break-word" th:utext="${recipe.Steps}">레시피</div>
         </div>
         <div style="width: 417px; height: 52.59px; left: 0px; top: 740px; position: absolute">
           <div style="width: 99px; height: 40px; padding-left: 16px; padding-right: 16px; padding-top: 6px; padding-bottom: 6px; left: 99px; top: 5px; position: absolute; background: linear-gradient(122deg, #11CDEF 0%, #1171EF 100%); box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25); border-radius: 8px; justify-content: flex-start; align-items: center; gap: 4px; display: inline-flex">
@@ -145,7 +139,8 @@
         </div>
         <div style="width: 374px; height: 114.22px; left: 7px; top: 0px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 30px; display: inline-flex">
           <div style="width: 374px; height: 26px; background: white; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 1px; display: flex">
-            <div style="width: 381px; height: 100px"><span style="color: #7B62E4; font-size: 37px; font-family: Open Sans; font-weight: 600; line-height: 60.12px; word-wrap: break-word">레시피 : 허니 웨지 감자<br/></span><span style="color: #7B62E4; font-size: 16px; font-family: Open Sans; font-weight: 600; line-height: 26px; word-wrap: break-word">저자  - 베네딕토 16세</span></div>
+            <div style="width: 381px; height: 100px">
+                <span style="color: #7B62E4; font-size: 37px; font-family: Open Sans; font-weight: 600; line-height: 60.12px; word-wrap: break-word">레시피: <span th:utext="${recipe.name}">레시피</span></span></div>
           </div>
         </div>
       </div>

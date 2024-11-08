@@ -1,4 +1,4 @@
-package com.haji.demo.thymeleaf_test.controller.ref;
+package com.polytechnics.demo.refrigerator.controller.ref;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.haji.demo.thymeleaf_test.service.ref.RecipeService;
-import com.polytechnics.demo.ref.Recipe;
+import com.polytechnics.demo.refrigerator.service.ref.RecipeService;
+import com.polytechnics.demo.refrigerator.model.ref.Recipe;
 
 
 @Controller

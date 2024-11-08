@@ -1,12 +1,12 @@
-package com.haji.demo.thymeleaf_test.service.ref;
+package com.polytechnics.demo.refrigerator.service.ref;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.polytechnics.demo.ref.Recipe;
-import com.polytechnics.demo.repository.ref.RecipeRepository;
+import com.polytechnics.demo.refrigerator.model.ref.Recipe;
+import com.polytechnics.demo.refrigerator.repository.RecipeRepository;
 
 @Service
 public class RecipeService{

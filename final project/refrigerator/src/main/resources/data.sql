@@ -3,10 +3,24 @@
 INSERT INTO USER (id) VALUES (1);
 INSERT INTO USER (id) VALUES (2);
 INSERT INTO USER (id) VALUES (3);
-INSERT INTO USER (id) VALUES (4);INSERT INTO MEMO (id, memo, created_dt, deleted_dt) VALUES 
-(1, 'First memo', NOW(), NULL),
-(2, 'Second memo', NOW(), NULL),
-(3, 'Third memo', NOW(), NULL);
+INSERT INTO USER (id) VALUES (4);
+
+INSERT INTO MEMO (id, memo, created_dt, deleted_dt) VALUES 
+(11, 'First memo', NOW(), NULL),
+(12, 'Second memo', NOW(), NULL),
+(13, 'Third memo', NOW(), NULL);
+
+INSERT INTO MEMO (id, memo, created_dt, deleted_dt) VALUES
+(1, 'Bought milk, enough for the week', '2024-11-08 09:00:00', NULL),
+(2, '10 eggs left, need to buy more soon', '2024-11-08 09:05:00', NULL),
+(3, 'Need to organize fruits in the fridge', '2024-11-08 09:10:00', NULL),
+(4, 'Kimchi finished, need to buy more', '2024-11-08 09:15:00', NULL),
+(5, 'Thinking about when to clean the fridge', '2024-11-08 09:20:00', NULL),
+(6, 'Preparing ingredients for soybean paste stew', '2024-11-08 09:25:00', NULL),
+(7, 'Only 1 slice of cheese left', '2024-11-08 09:30:00', NULL),
+(8, '2 bottles of water left, drink them today', '2024-11-08 09:35:00', NULL),
+(9, 'Planning to buy a bunch of green grapes', '2024-11-08 09:40:00', NULL),
+(10, 'Some meat left, need to cook it soon', '2024-11-08 09:45:00', NULL);
 
 INSERT INTO FOOD_CATEGORY (id, name)
 VALUES

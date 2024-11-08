@@ -1,4 +1,4 @@
-package com.haji.demo.thymeleaf_test.model.ref;
+package com.polytechnics.demo.ref;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,12 +11,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Data
-@Table(name="RECIPE")
-public class Recipe {
+@Table(name="FOOD_CEGORY")
+public class FoodCetegory {
     
 	@Id
 	@Column(name="id")
 	private int id;
-	private String Ingredients;
-	private String Steps;
+    private String name;
 }

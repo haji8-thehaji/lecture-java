@@ -1,4 +1,4 @@
-package com.haji.demo.thymeleaf_test.model.ref;
+package com.polytechnics.demo.ref;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.haji.demo.thymeleaf_test.model.ref.Recipe;
 import com.haji.demo.thymeleaf_test.service.ref.RecipeService;
+import com.polytechnics.demo.ref.Recipe;
 
 
 @Controller

@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.haji.demo.thymeleaf_test.model.ref.Recipe;
-import com.haji.demo.thymeleaf_test.repository.ref.RecipeRepository;
+import com.polytechnics.demo.ref.Recipe;
+import com.polytechnics.demo.repository.ref.RecipeRepository;
 
 @Service
 public class RecipeService{

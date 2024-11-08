@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @Table(name="CART")
-public class CartInfo {
+public class Cart {
     
 	@Id
 	@Column(name="id")

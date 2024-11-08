@@ -47,10 +47,20 @@ CREATE TABLE board (
   views INT DEFAULT 0
 );
 
-CREATE TABLE FOOD_CATEGORY (
-  id integer,
-  name String
-);
+INSERT INTO FOOD_CATEGORY (id, name)
+VALUES
+(1, 'Fruits'),
+(2, 'Vegetables'),
+(3, 'Meat'),
+(4, 'Dairy'),
+(5, 'Bakery'),
+(6, 'Snacks'),
+(7, 'Beverages'),
+(8, 'Condiments'),
+(9, 'Seafood'),
+(10, 'Frozen Food');
+
+
 CREATE TABLE FOOD_INFO (
   id INTEGER PRIMARY KEY,
   food_category_id integer,

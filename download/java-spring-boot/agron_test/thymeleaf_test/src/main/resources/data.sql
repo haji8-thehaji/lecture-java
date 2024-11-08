@@ -56,10 +56,19 @@ INSERT INTO USER (id) VALUES (4);INSERT INTO MEMO (id, memo, created_dt, deleted
 (2, 'Second memo', NOW(), NULL),
 (3, 'Third memo', NOW(), NULL);
 
-INSERT INTO FOOD_INFO (id, name, standard_expire_day, standard_price, standard_volume, storage_type, custom_bool, season_spring, season_summer, season_autumn, season_winter) VALUES 
-(1, 'Apple', 30, 1000, '1kg', 'Refrigerated', 0, 1, 1, 0, 0),
-(2, 'Banana', 7, 800, '1kg', 'Room temperature', 0, 1, 1, 0, 0),
-(3, 'Carrot', 14, 500, '500g', 'Refrigerated', 1, 1, 0, 1, 0);
+INSERT INTO FOOD_INFO (id, food_category_id, name, image, standard_expire_day, standard_price, standard_volume, storage_type, custom_bool, season_spring, season_summer, season_autumn, season_winter)
+VALUES
+(1, 1, 'Apple', 'apple.jpg', 30, 1500, '500g', 'Refrigerated', 0, 1, 1, 0, 0),
+(2, 1, 'Pear', 'pear.jpg', 25, 2000, '600g', 'Refrigerated', 0, 1, 1, 0, 0),
+(3, 2, 'Kimchi', 'kimchi.jpg', 15, 3000, '1kg', 'Refrigerated', 0, 0, 1, 1, 0),
+(4, 3, 'Chicken', 'chicken.jpg', 5, 5000, '1kg', 'Frozen', 0, 0, 0, 1, 0),
+(5, 2, 'Doenjang (Fermented Soybean Paste)', 'doenjang.jpg', 365, 1000, '500g', 'Refrigerated', 0, 1, 0, 1, 1),
+(6, 4, 'Spaghetti', 'spaghetti.jpg', 7, 1500, '500g', 'Room Temperature', 0, 0, 1, 0, 1),
+(7, 3, 'Sausage', 'sausage.jpg', 10, 4000, '400g', 'Frozen', 0, 0, 1, 1, 0),
+(8, 1, 'Strawberry', 'strawberry.jpg', 7, 2500, '300g', 'Refrigerated', 0, 1, 1, 0, 0),
+(9, 5, 'Ice Cream', 'icecream.jpg', 30, 3500, '500ml', 'Frozen', 0, 0, 1, 0, 1),
+(10, 1, 'Grapes', 'grape.jpg', 15, 1800, '400g', 'Refrigerated', 0, 1, 1, 0, 0);
+
 
 INSERT INTO RECIPE (id, Ingredients, Steps) VALUES 
 (1, 'Chicken, salt, pepper, garlic', '1. Season the chicken with salt and pepper. 2. Add garlic and sauté. 3. Cook until the chicken is done.'),

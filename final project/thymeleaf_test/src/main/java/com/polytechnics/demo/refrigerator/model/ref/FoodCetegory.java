@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Data
-@Table(name="FOOD_CEGORY")
+@Table(name="FOOD_CATEGORY")
 public class FoodCetegory {
     
 	@Id

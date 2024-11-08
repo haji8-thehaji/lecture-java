@@ -1,10 +1,4 @@
-DROP TABLE book2 IF EXISTS;
-DROP TABLE lemp IF EXISTS;
 
-DROP TABLE isaga IF EXISTS;
-
-DROP TABLE boardHaji IF EXISTS;
-DROP TABLE board IF EXISTS;
 DROP TABLE FOOD_CATEGORY IF EXISTS;
 DROP TABLE FOOD_INFO IF EXISTS;
 DROP TABLE MEMO IF EXISTS;
@@ -14,54 +8,10 @@ DROP TABLE USER IF EXISTS;
 DROP TABLE CART IF EXISTS;
 
 
-CREATE TABLE book2 (
-  book_id VARCHAR(5),
-  title VARCHAR(40),
-  author VARCHAR(40),
-  publisher VARCHAR(40),
-  release_date VARCHAR(8),
-  isbn VARCHAR(13),
-  PRIMARY KEY(book_id)
+CREATE TABLE FOOD_CATEGORY (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(50)
 );
-CREATE TABLE lemp (
-  id VARCHAR(5),
-  state VARCHAR(40)
-);
-
-CREATE TABLE isaga (
-  id VARCHAR(5),
-  name VARCHAR(40)
-);
-
-CREATE TABLE boardHaji (
-  id VARCHAR(5) PRIMARY KEY,
-  name VARCHAR(40),
-  content LONGVARCHAR,
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  views INT DEFAULT 0
-);
-CREATE TABLE board (
-  id VARCHAR(5) PRIMARY KEY,
-  name VARCHAR(40),
-  content LONGVARCHAR,
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  views INT DEFAULT 0
-);
-
-INSERT INTO FOOD_CATEGORY (id, name)
-VALUES
-(1, 'Fruits'),
-(2, 'Vegetables'),
-(3, 'Meat'),
-(4, 'Dairy'),
-(5, 'Bakery'),
-(6, 'Snacks'),
-(7, 'Beverages'),
-(8, 'Condiments'),
-(9, 'Seafood'),
-(10, 'Frozen Food');
-
-
 CREATE TABLE FOOD_INFO (
   id INTEGER PRIMARY KEY,
   food_category_id integer,

@@ -17,11 +17,11 @@ public class RecipeController {
 	RecipeService recipeService;
 
 	@GetMapping("/recipe")
-	public String member_haji(Model model) {
+	public String recipe(Model model) {
 		List<Recipe> recipeList = recipeService.getAllRecipes();
 		model.addAttribute("recipeList", recipeList);
-		System.out.println(recipeList);
-        return "haji/board/recipe_haji";
+		// System.out.println(recipeList);
+        return "refrigerator/recipe";
 	}
 
 }

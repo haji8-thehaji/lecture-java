@@ -8,6 +8,18 @@ INSERT INTO USER (id) VALUES (4);INSERT INTO MEMO (id, memo, created_dt, deleted
 (2, 'Second memo', NOW(), NULL),
 (3, 'Third memo', NOW(), NULL);
 
+INSERT INTO MEMO (id, memo) VALUES
+(1, '우유 다 사두었음'),
+(2, '달걀 10개 남음'),
+(3, '과일 정리 필요'),
+(4, '김치 다 먹음, 새로운 김치 사야함'),
+(5, '냉장고 청소 언제 할지 생각'),
+(6, '된장찌개 재료 준비'),
+(7, '치즈 슬라이스 1개 남음'),
+(8, '물 2통 남음, 오늘 마셔야함'),
+(9, '청포도 1송이 구입 예정'),
+(10, '고기 조금 남음, 빨리 요리해야 함');
+
 INSERT INTO FOOD_CATEGORY (id, name)
 VALUES
 (1, 'Fruits'),

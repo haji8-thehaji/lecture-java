@@ -1,0 +1,27 @@
+package com.polytechnics.demo.refrigerator.controller.ref;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.polytechnics.demo.refrigerator.model.ref.Memo;
+import com.polytechnics.demo.refrigerator.service.ref.MemoService;
+
+
+@Controller
+public class MemoController {
+	@Autowired
+	MemoService memoService;
+
+	@GetMapping("/memo")
+	public String memo(Model model) {
+		List<Memo> memoList = memoService.getAllRecipes();
+		model.addAttribute("memoList", memoList);
+		//System.out.println(memoList);
+        return "refrigerator/memo";
+	}
+
+}

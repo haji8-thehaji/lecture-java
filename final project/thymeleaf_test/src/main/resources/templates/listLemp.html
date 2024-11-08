@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Lemp List</title>
+</head>
+<body>
+<h1>Lemp List</h1>
+<br/>
+<div>
+   <table border="1">
+      <tr>
+         <th>ID</th>
+         <th>state</th>
+      </tr>
+      <tr th:each ="lemp : ${allLemps}">
+         <td><a th:href="@{/viewLemp/{id}(id=${lemp.id})}"  th:text="${lemp.id}"></a></td>
+         <td th:text="${lemp.state}"></td>
+         <td>
+         	<a th:href="@{/updateViewLemp/{id}(id=${lemp.id})}" >수정</a>, 
+  	        <a th:href="@{/deleteLemp/{id}(id=${lemp.id})}" >삭제</a>
+         </td>
+      </tr>
+   </table>
+</div>
+<br/><br/>
+<a href="/">Main Page</a>
+</body>
+</html>

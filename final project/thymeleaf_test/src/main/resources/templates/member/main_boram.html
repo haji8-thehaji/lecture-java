@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영수증 인식</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            overflow: auto;
+        }
+        .food-item {
+            margin: 10px 0;
+        }
+        #video {
+            display: none;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+        #canvas {
+            display: none;
+        }
+        .ocr-list {
+            margin-top: 20px;
+        }
+        .ocr-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .ocr-item input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>영수증 인식</h2>
+    <button id="camera-button">카메라로 등록</button>
+    <div id="food-list"></div>
+    <div class="ocr-list" id="ocr-list"></div>
+
+    <video id="video"></video>
+    <canvas id="canvas"></canvas>
+
+    <script src="https://cdn.rawgit.com/naptha/tesseract.js/2.1.1/dist/tesseract.min.js"></script>
+    <script>
+        let cameraStream = null;
+
+        // 카메라 열기
+        document.getElementById('camera-button').onclick = openCamera;
+
+        function openCamera() {
+            const video = document.getElementById('video');
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(stream => {
+                    cameraStream = stream;
+                    video.srcObject = stream;
+                    video.style.display = 'block';
+                    video.play();
+                    document.getElementById('camera-button').innerText = '이미지 캡쳐';
+                    document.getElementById('camera-button').onclick = captureImage;
+                })
+                .catch(err => {
+                    console.error('카메라 접근 오류:', err);
+                    alert('카메라에 접근할 수 없습니다.');
+                });
+        }
+
+        // 이미지 캡처
+        function captureImage() {
+            const video = document.getElementById('video');
+            const canvas = document.getElementById('canvas');
+            const context = canvas.getContext('2d');
+
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0);
+            cameraStream.getTracks().forEach(track => track.stop()); // 스트림 중지
+            video.style.display = 'none';
+
+            const imageData = canvas.toDataURL('image/png');
+            processReceipt(imageData);
+            document.getElementById('camera-button').innerText = '카메라로 등록';
+            document.getElementById('camera-button').onclick = openCamera;
+        }
+
+        // 영수증 처리
+        function processReceipt(imageData) {
+            Tesseract.recognize(
+                imageData,
+                'kor', // 한국어 인식
+                { logger: info => console.log(info) }
+            ).then(({ data: { text } }) => {
+                const items = text.split('\n').filter(line => line.trim() !== '');
+                showOcrList(items);
+            }).catch(err => {
+                console.error(err);
+                alert('영수증 처리 중 오류가 발생했습니다.');
+            });
+        }
+
+        // OCR 결과 보여주기
+        function showOcrList(items) {
+            const ocrList = document.getElementById('ocr-list');
+            ocrList.innerHTML = ''; // 기존 항목 초기화
+
+            items.forEach((item, index) => {
+                const trimmedItem = item.trim();
+                if (trimmedItem) {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'ocr-item';
+                    itemDiv.innerHTML = `
+                        <input type="text" value="${trimmedItem}" id="ocr-item-${index}" />
+                        <button onclick="removeOcrItem(${index})">❌</button>
+                        <button onclick="addFoodFromOcr(${index})">등록</button>
+                    `;
+                    ocrList.appendChild(itemDiv);
+                }
+            });
+        }
+
+        // OCR 아이템 삭제
+        function removeOcrItem(index) {
+            const ocrList = document.getElementById('ocr-list');
+            const itemToRemove = ocrList.children[index];
+            if (itemToRemove) {
+                ocrList.removeChild(itemToRemove);
+            }
+        }
+
+        // OCR 아이템 등록
+        function addFoodFromOcr(index) {
+            const inputField = document.getElementById(`ocr-item-${index}`);
+            if (inputField) {
+                const foodName = inputField.value;
+                addFood(foodName);
+            }
+        }
+
+        // 음식 항목 추가
+        function addFood(name) {
+            const foodList = document.getElementById('food-list');
+            const foodItem = document.createElement('div');
+            foodItem.className = 'food-item';
+            foodItem.innerHTML = `<strong>${name}</strong>`;
+            foodList.appendChild(foodItem);
+        }
+    </script>
+</body>
+</html>
+

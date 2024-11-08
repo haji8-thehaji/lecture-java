@@ -20,6 +20,6 @@ public class Memo {
 	@Column(name="id")
 	private int id;
 	private String memo;
-    private Date created_dt;
-    private Date deleted_dt;
+    private Date createdDt;
+    private Date deletedDt;
 }

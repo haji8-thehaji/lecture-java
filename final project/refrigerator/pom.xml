@@ -11,7 +11,7 @@
 	<groupId>com.polytechnics.demo</groupId>
 	<artifactId>refrigerator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>thymeleaf_test</name>
+	<name>refrigerator_test</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

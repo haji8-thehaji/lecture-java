@@ -37,6 +37,7 @@ CREATE TABLE FOOD_INFO (
 
 CREATE TABLE RECIPE (
   id integer PRIMARY KEY,
+  name VARCHAR(40),
   Ingredients VARCHAR(500),
   Steps VARCHAR(500)
 );

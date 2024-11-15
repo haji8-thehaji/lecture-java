@@ -70,7 +70,14 @@ INSERT INTO FOOD_INVENTORY (id, food_id, expire_date, volume, created_dt, delete
 (2, 2, '2024-11-15 00:00:00', '500g', NOW(), NULL),
 (3, 3, '2025-01-10 00:00:00', '2kg', NOW(), NULL);
 
-INSERT INTO CART (id, food_id, volume) VALUES 
-(1, 1, '1kg'),
-(2, 2, '500g'),
-(3, 3, '2kg');
+INSERT INTO CART (id, food_id, volume, count, money) VALUES
+(1, 1, 'Small', 2, 5000),
+(2, 2, 'Medium', 3, 7500),
+(3, 3, 'Large', 1, 3000),
+(4, 4, 'Small', 4, 4000),
+(5, 5, 'Medium', 2, 6000),
+(6, 6, 'Large', 5, 12000),
+(7, 7, 'Small', 6, 15000),
+(8, 8, 'Medium', 3, 7500),
+(9, 9, 'Large', 2, 8000),
+(10, 10, 'Small', 7, 21000);

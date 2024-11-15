@@ -8,6 +8,4 @@ import com.polytechnics.demo.refrigerator.model.ref.Cart;
 @Repository
 public interface CartRepository extends JpaRepository<Cart, Integer> {
     
-    // //특정 음식 조회
-    // Cart findByFoodId(int foodId);
 }

@@ -75,6 +75,24 @@
                   </tbody>
                 </table>
               </div>
+              
+              <div class="table-responsive">
+                <table class="table table-flush" id="food-list">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>id</th>
+                      <th>name</th>
+                      <th>작성일</th>
+                      <th>action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr th:each ="memo : ${foodList}">
+                      <td class="text-sm" th:utext="${memo.id}"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

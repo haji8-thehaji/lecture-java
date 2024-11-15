@@ -7,16 +7,20 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Data
 @Table(name="CART")
-public class cart {
+public class Cart {
     
 	@Id
 	@Column(name="id")
 	private int id;
 	private int food_id;
     private String volume;
+	private int count;
+	private int money;
 }
+  

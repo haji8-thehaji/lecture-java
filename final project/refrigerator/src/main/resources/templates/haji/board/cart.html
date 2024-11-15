@@ -1,0 +1,119 @@
+<!--
+=========================================================
+* Argon Dashboard 2 PRO - v2.0.5
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/argon-dashboard-pro 
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../../../assets/img/favicon.png">
+  <title>
+    Thehaji
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../../../assets/css/argon-dashboard.css?v=2.0.5" rel="stylesheet" />
+</head>
+
+  <div class="min-height-300 bg-primary position-absolute w-100"></div>
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header pb-0">
+              <div class="d-lg-flex">
+                <div>
+                  <h5 class="mb-0">레시피</h5>
+                  <p class="text-sm mb-0">
+                    레시피를 찾아 요리를 만드세요~
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body px-0 pb-0">
+              <div class="table-responsive">
+                <table class="table table-flush" id="products-list">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>레시피</th>
+                      <th>이름</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                      <th>재료</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr th:each ="rep : ${recipeList}">
+                      <td>
+                        <img class="w-50" src="" alt="    ">
+                      </td>
+                      <td class="text-sm" th:utext="${rep.food_id}"></td>
+                      <td>
+                        <span class="badge badge-info badge-sm"> 요리하기 </span>
+                      </td>
+                      <td class="text-sm">
+                        <a href="javascript:;" th:href="@{/updateViewBrd/{id}(id=${rep.id})}" data-bs-toggle="tooltip" data-bs-original-title="Preview product">
+                          <i class="fas fa-eye text-secondary"></i>
+                        </a>
+                        <a href="javascript:;" th:href="@{/deleteBrd/{id}(id=${rep.id})}"  data-bs-toggle="tooltip" data-bs-original-title="Delete product">
+                          <i class="fas fa-trash text-secondary"></i>
+                        </a>
+                      </td>
+                      <td class="text-sm" th:utext="${rep.volume}"></td>
+                      <td class="text-sm" th:utext="${rep.count}"></td>
+                      <td class="text-sm" th:utext="${rep.money}"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../../../assets/js/core/popper.min.js"></script>
+  <script src="../../../assets/js/core/bootstrap.min.js"></script>
+  <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="../../../assets/js/plugins/datatables.js"></script>
+  <script>
+    if (document.getElementById('products-list')) {
+      const dataTableSearch = new simpleDatatables.DataTable("#products-list", {
+        searchable: true,
+        fixedHeight: false,
+        perPage: 5
+      });
+    };
+  </script>
+  <!-- Kanban scripts -->
+  <script src="../../../assets/js/plugins/dragula/dragula.min.js"></script>
+  <script src="../../../assets/js/plugins/jkanban/jkanban.js"></script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../../../assets/js/argon-dashboard.min.js?v=2.0.5"></script>
+</body>
+
+</html>

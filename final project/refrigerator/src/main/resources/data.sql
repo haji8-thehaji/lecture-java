@@ -82,7 +82,14 @@ INSERT INTO RECIPE (id, name, Ingredients, Steps) VALUES
 INSERT INTO FOOD_INVENTORY (id, food_id, expire_date, volume, created_dt, deleted_dt) VALUES 
 (1, 1, '2024-12-31 00:00:00', '1kg', NOW(), NULL),
 (2, 2, '2024-11-15 00:00:00', '500g', NOW(), NULL),
-(3, 3, '2025-01-10 00:00:00', '2kg', NOW(), NULL);
+(3, 3, '2025-01-10 00:00:00', '2kg', NOW(), NULL),
+(4, 4, '2025-01-10 00:00:00', '2kg', NOW(), NULL),
+(5, 5, '2025-01-10 00:00:00', '2kg', NOW(), NULL),
+(6, 6, '2025-01-10 00:00:00', '2kg', NOW(), NULL),
+(7, 7, '2025-01-10 00:00:00', '2kg', NOW(), NULL),
+(8, 8, '2025-01-10 00:00:00', '2kg', NOW(), NULL),
+(9, 9, '2025-01-10 00:00:00', '2kg', NOW(), NULL),
+(10, 10, '2025-01-10 00:00:00', '2kg', NOW(), NULL);
 
 INSERT INTO CART (id, food_id, volume, count, money) VALUES
 (1, 1, 'Small', 2, 5000),

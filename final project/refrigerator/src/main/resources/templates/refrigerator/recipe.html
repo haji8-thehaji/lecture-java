@@ -72,12 +72,11 @@
                         <span class="badge badge-info badge-sm"> 요리하기 </span>
                       </td>
                       <td class="text-sm">
-                        <a href="javascript:;" th:href="@{/updateViewBrd/{id}(id=${rep.id})}" data-bs-toggle="tooltip" data-bs-original-title="Preview product">
-                          <i class="fas fa-eye text-secondary"></i>
-                        </a>
-                        <a href="javascript:;" th:href="@{/deleteBrd/{id}(id=${rep.id})}"  data-bs-toggle="tooltip" data-bs-original-title="Delete product">
-                          <i class="fas fa-trash text-secondary"></i>
-                        </a>
+                        <form id="deleteRecipe" action="#"  th:action="@{'/deleteRecipe/' + ${rep.id}}" th:method="delete">
+                          <input type="hidden" name="_method" value="delete"/>
+                          <button id="delete-btn" class="btn btn-default" >삭제<i class="fas fa-trash text-secondary"></i> </button>
+                          
+                      </form>
                       </td>
                       <td class="text-sm" th:utext="${rep.Ingredients}"></td>
                     </tr>

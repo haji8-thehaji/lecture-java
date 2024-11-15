@@ -72,10 +72,11 @@
                         <span class="badge badge-info badge-sm"> 요리하기 </span>
                       </td>
                       <td class="text-sm">
-                        <a href="javascript:;" th:href="@{/updateViewBrd/{id}(id=${rep.id})}" data-bs-toggle="tooltip" data-bs-original-title="Preview product">
+                        <!-- <a href="javascript:;" th:href="@{//{id}(id=${rep.id})}" data-bs-toggle="tooltip" data-bs-original-title="Preview product">
                           <i class="fas fa-eye text-secondary"></i>
-                        </a>
-                        <a href="javascript:;" th:href="@{/deleteBrd/{id}(id=${rep.id})}"  data-bs-toggle="tooltip" data-bs-original-title="Delete product">
+                        </a> -->
+                        
+                        <a  th:href="@{/deleteRecipe/{id}(id=${rep.id})}"  data-bs-toggle="tooltip" data-bs-original-title="Delete product">
                           <i class="fas fa-trash text-secondary"></i>
                         </a>
                       </td>

@@ -16,6 +16,7 @@ import lombok.NoArgsConstructor;
 public interface Food {
 
     String getId();
+
     String getName();
 
 }

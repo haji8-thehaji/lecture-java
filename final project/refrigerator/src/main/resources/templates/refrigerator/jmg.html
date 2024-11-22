@@ -43,9 +43,9 @@
             <div class="card-header pb-0">
               <div class="d-lg-flex">
                 <div>
-                  <h5 class="mb-0">레시피</h5>
+                  <h5 class="mb-0">유통기한 리스트</h5>
                   <p class="text-sm mb-0">
-                    레시피를 찾아 요리를 만드세요~
+                    유통기한을 참고하세요
                   </p>
                 </div>
               </div>
@@ -56,14 +56,14 @@
                   <thead class="thead-light">
                     <tr>
                       <th>레시피</th>
-                      <th>이름</th>
+                      <th>무게</th>
                       <th>Status</th>
                       <th>Action</th>
-                      <th>재료</th>
+                      <th>유통기한</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr th:each ="rep : ${recipeList}">
+                    <tr th:each ="rep : ${jmg}">
                       <td>
                         <img class="w-50" src="/assets/img/Food/recipe/Apple Oatmeal.jpg" alt="Apple Oatmeal">
                       </td>
@@ -72,13 +72,13 @@
                         <span class="badge badge-info badge-sm"> 요리하기 </span>
                       </td>
                       <td class="text-sm">
-                        <form id="deleteRecipe" action="#"  th:action="@{'/deleteRecipe/' + ${rep.id}}" th:method="delete">
+                        <form id="deleteFoodInventory" action="#"  th:action="@{'/deleteFoodInventory/' + ${rep.id}}" th:method="delete">
                           <input type="hidden" name="_method" value="delete"/>
                           <button id="delete-btn" class="btn btn-default" >삭제<i class="fas fa-trash text-secondary"></i> </button>
                           
                       </form>
                       </td>
-                      <td class="text-sm" th:utext="${rep.expire_date}"></td>
+                      <td class="text-sm" th:utext="${#dates.format(rep.expire_date, 'yyyy-MM-dd')}"></td>
                     </tr>
                   </tbody>
                 </table>

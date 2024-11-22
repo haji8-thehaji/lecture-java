@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.polytechnics.demo.refrigerator.model.ref.Recipe;
 import com.polytechnics.demo.refrigerator.service.ref.RecipeService;
 
-
 @Controller
 public class RecipeController {
 	@Autowired
@@ -24,23 +23,23 @@ public class RecipeController {
 		List<Recipe> recipeList = recipeService.getAllRecipes();
 		model.addAttribute("recipeList", recipeList);
 		// System.out.println(recipeList);
-        return "refrigerator/recipe";
+		return "refrigerator/recipe";
 	}
 	// @GetMapping("/deleteRecipe/{id}")
-    // @ResponseBody
+	// @ResponseBody
 	// public String deleteRecipe(Model model, @PathVariable Integer id) {
-	// 	recipeService.deleteRecipe(id);
-	// 	List<Recipe> recipeList = recipeService.getAllRecipes();
-	// 	model.addAttribute("recipeList", recipeList);
-	// 	// System.out.println(recipeList);
-    //     return "refrigerator/recipe";
+	// recipeService.deleteRecipe(id);
+	// List<Recipe> recipeList = recipeService.getAllRecipes();
+	// model.addAttribute("recipeList", recipeList);
+	// // System.out.println(recipeList);
+	// return "refrigerator/recipe";
 	// }
-	
-    @DeleteMapping("/deleteRecipe/{id}")
-    public String deleteRecipe(@PathVariable("id") int id){
-        System.out.println("id = " + id);
-        recipeService.deleteRecipe(id);
-        return "redirect:/recipe";
-    }
-	
+
+	@DeleteMapping("/deleteRecipe/{id}")
+	public String deleteRecipe(@PathVariable("id") int id) {
+		System.out.println("id = " + id);
+		recipeService.deleteRecipe(id);
+		return "redirect:/recipe";
+	}
+
 }

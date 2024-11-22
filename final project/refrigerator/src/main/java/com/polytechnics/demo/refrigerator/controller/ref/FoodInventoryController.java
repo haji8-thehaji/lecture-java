@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.polytechnics.demo.refrigerator.model.ref.common.Food;
+import com.polytechnics.demo.refrigerator.model.ref.FoodInventory;
 import com.polytechnics.demo.refrigerator.service.ref.FoodInventoryService;
 
 @Controller
@@ -17,10 +17,10 @@ public class FoodInventoryController {
 
 	@GetMapping("/food")
 	public String food(Model model) {
-		List<Food> foodList = foodInventoryService.getAllFoodInventory();
+		List<FoodInventory> foodList = foodInventoryService.getAllFoodInventory();
 		model.addAttribute("foodList", foodList);
 		System.out.println(foodList);
-        return "refrigerator/memo";
+		return "refrigerator/memo";
 	}
 
 }

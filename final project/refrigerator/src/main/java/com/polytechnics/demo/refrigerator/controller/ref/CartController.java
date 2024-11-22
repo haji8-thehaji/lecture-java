@@ -18,7 +18,9 @@ public class CartController {
 	@GetMapping("/cart")
 	public String member_haji(Model model) {
 		List<Cart> cartList = cartService.getAllCarts();
-		model.addAttribute("recipeList", cartList);
-        return "haji/board/cart";
+		model.addAttribute("cartList", cartList);
+		model.addAttribute("count", 3);
+		System.out.println(cartList);
+        return "refrigerator/cart";
 	}
 }

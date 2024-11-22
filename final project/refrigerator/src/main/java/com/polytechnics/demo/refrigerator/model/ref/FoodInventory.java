@@ -9,17 +9,18 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Data
-@Table(name="FOOD_INVENTORY")
+@Table(name = "FOOD_INVENTORY")
 public class FoodInventory {
-    
-	@Id
-	@Column(name="id")
-	private int id;
-	private int food_id;
+
+    @Id
+    @Column(name = "id")
+    private int id;
+    private int food_id;
     private Date expire_date;
     private String volume;
     private Date created_dt;

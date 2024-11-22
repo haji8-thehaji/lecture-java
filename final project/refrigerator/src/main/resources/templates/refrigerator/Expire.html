@@ -63,22 +63,22 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr th:each ="rep : ${jmg}">
+                    <tr th:each ="rep : ${expireList}">
                       <td>
                         <img class="w-50" src="/assets/img/Food/recipe/Apple Oatmeal.jpg" alt="Apple Oatmeal">
                       </td>
-                      <td class="text-sm" th:utext="${rep.volume}"></td>
+                      <td class="text-sm" th:utext="${rep.foodInfo.name}"></td>
                       <td>
                         <span class="badge badge-info badge-sm"> 요리하기 </span>
                       </td>
                       <td class="text-sm">
-                        <form id="deleteFoodInventory" action="#"  th:action="@{'/deleteFoodInventory/' + ${rep.id}}" th:method="delete">
+                        <form id="deleteFoodInventory" action="#"  th:action="@{'/deleteFoodInventory/' + ${rep.foodInventory.id}}" th:method="delete">
                           <input type="hidden" name="_method" value="delete"/>
                           <button id="delete-btn" class="btn btn-default" >삭제<i class="fas fa-trash text-secondary"></i> </button>
                           
                       </form>
                       </td>
-                      <td class="text-sm" th:utext="${#dates.format(rep.expire_date, 'yyyy-MM-dd')}"></td>
+                      <td class="text-sm" th:utext="${#dates.format(rep.foodInventory.expire_date, 'yyyy-MM-dd')}"></td>
                     </tr>
                   </tbody>
                 </table>

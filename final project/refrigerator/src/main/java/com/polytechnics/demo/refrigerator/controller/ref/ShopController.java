@@ -7,8 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.polytechnics.demo.refrigerator.model.ref.Cart;
-import com.polytechnics.demo.refrigerator.service.ref.ShopService;
+import com.polytechnics.demo.refrigerator.model.ref.FoodInfo;
+import com.polytechnics.demo.refrigerator.model.ref.common.FoodInfoDetail;
+import com.polytechnics.demo.refrigerator.service.ref.FoodInfoService;
 
 @Controller
 public class ShopController {
@@ -16,10 +17,21 @@ public class ShopController {
     @Autowired
     ShopService shopService;
 
-    @GetMapping("/shop")
-    public String showProducts(Model model) {
-        List<Cart> shopItems = shopService.getAllItems();
-        model.addAttribute("shopItems", shopItems);
-        return "shop";
+    @GetMapping("/shop/{food_category_id}")
+    public String showProducts(Model model, @PathVariable("food_category_id") int food_category_id) {
+        List<FoodInfo> foodInfos = foodInfoService.getAllFoodInfoByCategoryId(food_category_id);
+        model.addAttribute("foodInfos", foodInfos);
+        return "refrigerator/shop";
+    }
+    @GetMapping("/shop2/{food_category_id}")
+    public String showProducts2(Model model, @PathVariable("food_category_id") int food_category_id) {
+        List<FoodInfo> foodInfos = foodInfoService.getAllFoodInfoByCategoryId(food_category_id);
+        model.addAttribute("foodInfos", foodInfos);
+        List<FoodInfoDetail> foodInfos2 = foodInfoService.getFoodInfo(food_category_id);
+        model.addAttribute("foodInfos2", foodInfos);
+        //System.out.println(foodInfos2);/
+        //System.out.println(Arrays.deepToString(foodInfos2));
+        System.out.println(foodInfos2);
+        return "refrigerator/shop";
     }
 }

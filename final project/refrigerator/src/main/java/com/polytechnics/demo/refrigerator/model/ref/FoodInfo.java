@@ -19,6 +19,7 @@ public class FoodInfo {
 	private int id;
 	private int foodCategoryId;
 	private String name;
+	private String image;
     private int standard_expire_day;
     private int standard_price;
     private String standard_volume;

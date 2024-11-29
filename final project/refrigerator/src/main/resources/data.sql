@@ -22,18 +22,18 @@ INSERT INTO MEMO_LIST (id, memo, created_dt, deleted_dt) VALUES
 (9, 'Planning to buy a bunch of green grapes', '2024-11-08 09:40:00', NULL),
 (10, 'Some meat left, need to cook it soon', '2024-11-08 09:45:00', NULL);
 
-INSERT INTO FOOD_CATEGORY (id, name)
+INSERT INTO FOOD_CATEGORY (id, name, image)
 VALUES
-(1, 'Fruits'),
-(2, 'Vegetables'),
-(3, 'Meat'),
-(4, 'Dairy'),
-(5, 'Bakery'),
-(6, 'Snacks'),
-(7, 'Beverages'),
-(8, 'Condiments'),
-(9, 'Seafood'),
-(10, 'Frozen Food');
+(1, 'Fruits', 'Fruits.webp'),
+(2, 'Vegetables', 'Vegetables.webp'),
+(3, 'Meat', 'Meat.webp'),
+(4, 'Dairy', 'Dairy.png'),
+(5, 'Bakery', 'Bakery.webp'),
+(6, 'Snacks', 'Snacks.webp'),
+(7, 'Beverages', 'Beverages.webp'),
+(8, 'Condiments', 'Condiments.jpg'),
+(9, 'Seafood', 'Seafood.png'),
+(10, 'Frozenfood', 'Frozenfood.jpg');
 
 INSERT INTO FOOD_INFO (id, food_category_id, name, image, standard_expire_day, standard_price, standard_volume, storage_type, custom_bool, season_spring, season_summer, season_autumn, season_winter)
 VALUES

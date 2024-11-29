@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.polytechnics.demo.refrigerator.model.ref.FoodInfo;
 import com.polytechnics.demo.refrigerator.model.ref.TestDto;
+import com.polytechnics.demo.refrigerator.model.ref.common.Food;
 import com.polytechnics.demo.refrigerator.model.ref.common.FoodInfoDetail;
 import com.polytechnics.demo.refrigerator.repository.FoodInfoRepository;
 
@@ -37,6 +38,10 @@ public class FoodInfoService {
         return foodInfopRepository.findTestDto();
  
      }
+     public List<Food> getAllFoodByCategoryId(int foodCategoryId) {
+        return foodInfopRepository.findAllFoodByCategoryId(foodCategoryId);
+     }
+     
     
 }
 

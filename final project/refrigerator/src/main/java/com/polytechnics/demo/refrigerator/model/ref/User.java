@@ -1,3 +1,4 @@
+
 package com.polytechnics.demo.refrigerator.model.ref;
 
 import jakarta.persistence.Column;

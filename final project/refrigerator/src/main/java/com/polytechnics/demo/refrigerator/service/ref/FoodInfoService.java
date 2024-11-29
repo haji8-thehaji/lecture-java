@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import com.polytechnics.demo.refrigerator.model.ref.FoodInfo;
 import com.polytechnics.demo.refrigerator.model.ref.common.FoodInfoDetail;
-import com.polytechnics.demo.refrigerator.repository.FoodInfoRepository;
 
 @Service
 public class FoodInfoService {
@@ -30,6 +29,7 @@ public class FoodInfoService {
 
     public List<FoodInfoDetail> getFoodInfo(int foodCategoryId) {
        return foodInfopRepository.findByFoodInfoDetail(foodCategoryId);
+
     }
     
 }

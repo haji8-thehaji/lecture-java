@@ -43,9 +43,9 @@
             <div class="card-header pb-0">
               <div class="d-lg-flex">
                 <div>
-                  <h5 class="mb-0">유통기한 리스트</h5>
+                  <h5 class="mb-0">장바구니</h5>
                   <p class="text-sm mb-0">
-                    유통기한을 참고하세요
+                    장바구니를 찾아 재료를 구매하세요~
                   </p>
                 </div>
               </div>
@@ -55,30 +55,44 @@
                 <table class="table table-flush" id="products-list">
                   <thead class="thead-light">
                     <tr>
-                      <th>레시피</th>
-                      <th>무게</th>
-                      <th>Status</th>
-                      <th>Action</th>
-                      <th>유통기한</th>
+                      <th>img</th>
+                      <th>food_id</th>
+                      <th>id</th>
+                      <th>volume</th>
+                      <th>count</th>
+                      <th>money</th>
+                      <th>total money</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr th:each ="rep : ${jmg}">
+                    <tr th:each ="rep : ${cartList}">
                       <td>
-                        <img class="w-50" src="/assets/img/Food/recipe/Apple Oatmeal.jpg" alt="Apple Oatmeal">
+                        <div class="d-flex align-items-center">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="customCheck1">
+                          </div>
+                          <p class="text-xs font-weight-bold ms-2 mb-0" th:utext="${rep.id}"></p>
+                        </div>
+                      </td>
+                      <td>
+                        <img class="w-50" src="" alt="    ">
+                      </td>
+                      <td class="text-sm" th:utext="${rep.food_id}"></td>
+                      <td class="text-sm">
+                        <a href="javascript:;" th:href="@{/updateViewBrd/{id}(id=${rep.id})}" data-bs-toggle="tooltip" data-bs-original-title="Preview product">
+                          
+                        <span class="badge badge-info badge-sm"> 요리하기 </span>
+                        </a>
                       </td>
                       <td class="text-sm" th:utext="${rep.volume}"></td>
-                      <td>
-                        <span class="badge badge-info badge-sm"> 요리하기 </span>
+                      <td class="text-sm" > 
+                        <select id="rep.count" name="rep.count">
+                          <option th:each="i : ${#numbers.sequence(0, 10)}" th:value="${i}" th:text="${i}"
+                            th:selected="${i==rep.count}"></option>
+                        </select>
                       </td>
-                      <td class="text-sm">
-                        <form id="deleteFoodInventory" action="#"  th:action="@{'/deleteFoodInventory/' + ${rep.id}}" th:method="delete">
-                          <input type="hidden" name="_method" value="delete"/>
-                          <button id="delete-btn" class="btn btn-default" >삭제<i class="fas fa-trash text-secondary"></i> </button>
-                          
-                      </form>
-                      </td>
-                      <td class="text-sm" th:utext="${#dates.format(rep.expire_date, 'yyyy-MM-dd')}"></td>
+                      <td class="text-sm" th:utext="${rep.money}"></td>
+                      <td class="text-sm" th:utext="${rep.money} * ${rep.count}"></td>
                     </tr>
                   </tbody>
                 </table>

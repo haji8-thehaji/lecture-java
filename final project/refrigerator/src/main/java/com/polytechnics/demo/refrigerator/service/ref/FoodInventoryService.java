@@ -21,4 +21,12 @@ public class FoodInventoryService {
         FoodInventoryRepository.deleteById(id);
     }
 
+    public List<FoodInventory> getAllFoodInventoryByInfoId(int food_info_id) {
+        return FoodInventoryRepository.findById(food_info_id);
+    }
+
+    public Object[] getFoodInventory(int foodInfoId) {
+        return FoodInventoryRepository.findAllActiveUsersNative(foodInfoId);
+    }
+
 }

@@ -7,19 +7,20 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Data
-@Table(name="FOOD_INFO")
+@Table(name = "FOOD_INFO")
 public class FoodInfo {
-    
-	@Id
-	@Column(name="id")
-	private int id;
-	private int foodCategoryId;
-	private String name;
-	private String image;
+
+    @Id
+    @Column(name = "id")
+    private int id;
+    private int foodCategoryId;
+    private String name;
+    private String image;
     private int standard_expire_day;
     private int standard_price;
     private String standard_volume;

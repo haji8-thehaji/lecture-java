@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import com.polytechnics.demo.refrigerator.model.ref.FoodInfo;
+import com.polytechnics.demo.refrigerator.service.ref.ExpireService;
 import com.polytechnics.demo.refrigerator.model.ref.FoodInventory;
 import com.polytechnics.demo.refrigerator.service.ref.FoodInventoryService;
 
@@ -20,14 +21,10 @@ public class ExpireController {
 	FoodInventoryService expireService;
 
 	@GetMapping("/expire")
-	public String showProducts2(Model model, @PathVariable("food_info_id") int food_info_id) {
-		List<FoodInventory> expireList = expireService.getAllFoodInventoryByInfoId(food_info_id);
-		model.addAttribute("FoodInventorys", expireList);
-		// Object[] expireList2 = expireService.getFoodInventory(food_info_id);
-		// model.addAttribute("FoodInventorys2", expireList);
-		// System.out.println(Arrays.deepToString(expireList2));
-		return "refrigerator/shop";
-
+	public String getExpire(Model model) {
+		List<FoodInfo> expireList = expireService.getAllExpire();
+		model.addAttribute("expireList", expireList); // Expire 데이터 추가
+		return "refrigerator/expire"; // 뷰 이름
 	}
 
 	@DeleteMapping("/deleteExpire/{id}")

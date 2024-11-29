@@ -16,6 +16,8 @@ public interface FoodInventoryRepository extends JpaRepository<FoodInventory, In
     // food_category as fc on f.category_id =:foodCategoryId", nativeQuery = true)
     // List<Object[]> findByFoodInfoByFoodCategoryId(@Param("foodCategoryId") int
     // foodCategoryId );
-    @Query(value = "SELECT f.*, fc.name as info_name FROM FOOD_INVENTORY f inner join FOOD_INFO as fc on f.food_info_id = fc.id WHERE f.food_info_id =:bno nativeQuery = true)")
-    Object[] findAllActiveUsersNative(@Param("bno") int bno);
+    // @Query(value = "SELECT f.*, fc.name as info_name FROM FOOD_INVENTORY f inner
+    // join FOOD_INFO as fc on f.food_info_id = fc.id WHERE f.food_info_id =:bno
+    // nativeQuery = true)")
+    // Object[] findAllActiveUsersNative(@Param("bno") int bno);
 }

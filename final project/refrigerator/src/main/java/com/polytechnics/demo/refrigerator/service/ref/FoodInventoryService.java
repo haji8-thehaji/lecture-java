@@ -25,8 +25,8 @@ public class FoodInventoryService {
         return FoodInventoryRepository.findById(food_info_id);
     }
 
-    public Object[] getFoodInventory(int foodInfoId) {
-        return FoodInventoryRepository.findAllActiveUsersNative(foodInfoId);
-    }
+    // public Object[] getFoodInventory(int foodInfoId) {
+    // return FoodInventoryRepository.findAllActiveUsersNative(foodInfoId);
+    // }
 
 }

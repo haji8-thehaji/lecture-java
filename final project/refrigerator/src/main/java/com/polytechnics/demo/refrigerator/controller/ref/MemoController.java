@@ -23,6 +23,13 @@ public class MemoController {
 		//System.out.println(memoList);
         return "refrigerator/memo";
 	}
+	@GetMapping("/new-memo")
+	public String newMemo(Model model) {
+		// List<Memo> memoList = memoService.getAllRecipes();
+		// model.addAttribute("memoList", memoList);
+		//System.out.println(memoList);
+        return "refrigerator/new-memo";
+	}
 
 	@GetMapping("/isaga")
 	public String isaga(Model model) {

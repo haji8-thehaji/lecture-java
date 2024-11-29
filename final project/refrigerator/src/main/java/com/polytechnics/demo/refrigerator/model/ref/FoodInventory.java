@@ -25,4 +25,5 @@ public class FoodInventory {
     private String volume;
     private Date created_dt;
     private Date deleted_dt;
+
 }

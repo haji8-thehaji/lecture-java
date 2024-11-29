@@ -12,17 +12,18 @@ public class ExpireService {
 
     private List<Expire> expireList = new ArrayList<>();
 
-    // Expire 데이터 목록 가져오기
+    // 예시로 데이터 추가
     public List<Expire> getAllExpire() {
-        return expireList; // 실제 데이터베이스 사용 대신 메모리 내 데이터 목록 반환
+        // 실제 데이터베이스에서 데이터를 가져오지 않고, 메모리 내 데이터 리스트 반환
+        return expireList;
     }
 
-    // Expire 데이터 삭제
     public void deleteExpire(int id) {
-        expireList.removeIf(expire -> expire.getFoodInfo().getId() == id); // ID로 Expire 삭제
+        // id에 해당하는 Expire 객체를 삭제하는 로직 추가 (여기서는 임시로 리스트에서 삭제하는 방식)
+        expireList.removeIf(expire -> expire.getFoodInfo().getId() == id); // FoodInfo의 ID를 기준으로 삭제
     }
 
-    // 예시로 Expire 추가
+    // 예시로 데이터 추가 메서드
     public void addExpire(Expire expire) {
         expireList.add(expire);
     }

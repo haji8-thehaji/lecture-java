@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.polytechnics.demo.refrigerator.model.ref.FoodInfo; 
-import com.polytechnics.demo.refrigerator.repository.FoodInfoRepository;
+import com.polytechnics.demo.refrigerator.model.ref.FoodInfo;
+import com.polytechnics.demo.refrigerator.model.ref.common.FoodInfoDetail;
 
 @Service
 public class FoodInfoService {
@@ -19,16 +19,17 @@ public class FoodInfoService {
         return foodInfopRepository.findAll(Sort.by(Sort.Direction.ASC, "id"));
     }
 
-    public List<FoodInfo> getAllFoodInfoByCategoryId(int food_category_id) {
-        return foodInfopRepository.findByFoodCategoryId(food_category_id);
+    public List<FoodInfo> getAllFoodInfoByCategoryId(int foodCategoryId) {
+        return foodInfopRepository.findByFoodCategoryId(foodCategoryId);
     }
 
-    //public List<Object[]> getAllFoodInfoDetailyCategoryId(int foodCategoryId) {
-    //    return foodInfopRepository.findByFoodInfoByFoodCategoryId(foodCategoryId);
-    //}
-
-    public Object[] getFoodInfo(int foodCategoryId) {
+    public Object[] getAllFoodInfoDetailyCategoryId(int foodCategoryId) {
        return foodInfopRepository.findAllActiveUsersNative(foodCategoryId);
+    }
+
+    public List<FoodInfoDetail> getFoodInfo(int foodCategoryId) {
+       return foodInfopRepository.findByFoodInfoDetail(foodCategoryId);
+
     }
     
 }

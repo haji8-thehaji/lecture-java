@@ -12,13 +12,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.polytechnics.demo.refrigerator.model.ref.FoodInfo;
 import com.polytechnics.demo.refrigerator.service.ref.ExpireService;
-import com.polytechnics.demo.refrigerator.model.ref.FoodInventory;
-import com.polytechnics.demo.refrigerator.service.ref.FoodInventoryService;
 
 @Controller
 public class ExpireController {
 	@Autowired
-	FoodInventoryService expireService;
+	ExpireService expireService;
 
 	@GetMapping("/expire")
 	public String getExpire(Model model) {
@@ -30,7 +28,7 @@ public class ExpireController {
 	@DeleteMapping("/deleteExpire/{id}")
 	public String deleteExpire(@PathVariable("id") int id) {
 		System.out.println("id = " + id);
-		expireService.deleteFoodInventory(id); // Expire 삭제
+		expireService.deleteExpire(id); // Expire 삭제
 		return "redirect:/expire"; // 삭제 후 리다이렉트
 	}
 }

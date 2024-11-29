@@ -1,6 +1,7 @@
 package com.polytechnics.demo.refrigerator.controller.ref;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,12 +28,20 @@ public class MainController {
     public String showMainPage(Model model) {
         // User user = mainService.getUserByName("홍길동");
         // model.addAttribute("userName", user.getUserName());
-		List<Memo> memoList = memoService.getAllRecipes();
-		model.addAttribute("memo", memoList.get(0));
+		List<Memo> memoList = memoService.getAllMemos();
+        model.addAttribute("memoList", memoList);
 		//System.out.println(memoList);
-        List<Recipe> recipeList = recipeService.getAllRecipes();
-		model.addAttribute("recipe", recipeList.get(0));
-		// System.out.println(recipeList);
+        Optional<Recipe> recipeOptional = mainService.getRandomRecipe();
+
+        if (recipeOptional.isPresent()) {
+            Recipe recipe = recipeOptional.get();
+            List<String> steps = mainService.getSteps(recipe.getSteps()); // steps 가공
+            model.addAttribute("recipe", recipe);
+            model.addAttribute("steps", steps);
+        } else {
+            model.addAttribute("error", "No recipe found");
+        }
+
         return "ref_main";
     }
 }

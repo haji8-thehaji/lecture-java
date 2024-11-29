@@ -13,7 +13,7 @@ import com.polytechnics.demo.refrigerator.repository.MemoRepository;
 public class MemoService{
     @Autowired
     private MemoRepository memoRepository;
-    public List<Memo> getAllRecipes() { 
-        return memoRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
-    } 
+    public List<Memo> getAllMemos() { 
+        return memoRepository.findAll(Sort.by(Sort.Direction.ASC, "id"));
+    }
 }

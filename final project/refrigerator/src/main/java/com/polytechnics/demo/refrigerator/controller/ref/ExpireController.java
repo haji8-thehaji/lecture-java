@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.polytechnics.demo.refrigerator.model.ref.common.Expire;
+import com.polytechnics.demo.refrigerator.model.ref.FoodInfo;
 import com.polytechnics.demo.refrigerator.service.ref.ExpireService;
 
 @Controller
@@ -19,7 +19,7 @@ public class ExpireController {
 
 	@GetMapping("/expire")
 	public String getExpire(Model model) {
-		List<Expire> expireList = expireService.getAllExpire();
+		List<FoodInfo> expireList = expireService.getAllExpire();
 		model.addAttribute("expireList", expireList); // Expire 데이터 추가
 		return "refrigerator/expire"; // 뷰 이름
 	}

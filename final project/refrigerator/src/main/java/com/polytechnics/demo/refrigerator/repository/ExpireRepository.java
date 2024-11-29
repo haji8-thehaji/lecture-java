@@ -1,11 +1,9 @@
 package com.polytechnics.demo.refrigerator.repository;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.polytechnics.demo.refrigerator.model.ref.common.Expire;
+import com.polytechnics.demo.refrigerator.model.ref.FoodInfo;
 
-public interface ExpireRepository {
-    List<Expire> getAllExpire(); // Expire 목록을 가져오는 메서드
+public interface ExpireRepository extends JpaRepository<FoodInfo, Integer> {
 
-    void deleteExpire(int id); // Expire 삭제 메서드
 }

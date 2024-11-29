@@ -20,8 +20,8 @@ public class FoodInfoService {
         return foodInfopRepository.findAll(Sort.by(Sort.Direction.ASC, "id"));
     }
 
-    public List<FoodInfo> getAllFoodInfoByCategoryId(int food_category_id) {
-        return foodInfopRepository.findByFoodCategoryId(food_category_id);
+    public List<FoodInfo> getAllFoodInfoByCategoryId(int foodCategoryId) {
+        return foodInfopRepository.findByFoodCategoryId(foodCategoryId);
     }
 
     public Object[] getAllFoodInfoDetailyCategoryId(int foodCategoryId) {

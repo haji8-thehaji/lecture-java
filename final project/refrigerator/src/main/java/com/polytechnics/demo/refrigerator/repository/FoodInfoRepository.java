@@ -11,7 +11,7 @@ import com.polytechnics.demo.refrigerator.model.ref.common.FoodInfoDetail;
 
 public interface FoodInfoRepository extends JpaRepository<FoodInfo, Integer> {
 
-    List<FoodInfo> findByFoodCategoryId(int foodCategoryId);
+    List<FoodInfo> findByFoodCategoryId(int food_category_id);
 
     //@Query("select f.id , fc.name as category_name from food_info as f inner join food_category as fc on f.category_id =:foodCategoryId", nativeQuery = true)
     //List<Object[]> findByFoodInfoByFoodCategoryId(@Param("foodCategoryId") int foodCategoryId );

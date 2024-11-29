@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Data
-@Table(name="MEMO")
+@Table(name="MEMO_LIST")
 public class Memo {
     
 	@Id

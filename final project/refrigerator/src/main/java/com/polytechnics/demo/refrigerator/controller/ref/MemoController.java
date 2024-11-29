@@ -18,10 +18,17 @@ public class MemoController {
 
 	@GetMapping("/memo")
 	public String memo(Model model) {
-		List<Memo> memoList = memoService.getAllRecipes();
+		List<Memo> memoList = memoService.getAllMemos();
 		model.addAttribute("memoList", memoList);
 		//System.out.println(memoList);
         return "refrigerator/memo";
+	}
+
+	@GetMapping("/isaga")
+	public String isaga(Model model) {
+		
+		//System.out.println(memoList);
+        return "haji/board/products-list";
 	}
 
 }

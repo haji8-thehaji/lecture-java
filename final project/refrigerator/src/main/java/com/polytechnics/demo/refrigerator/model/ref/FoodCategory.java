@@ -12,10 +12,11 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @Table(name="FOOD_CATEGORY")
-public class FoodCetegory {
+public class FoodCategory {
     
 	@Id
 	@Column(name="id")
 	private int id;
     private String name;
+    private String image;
 }

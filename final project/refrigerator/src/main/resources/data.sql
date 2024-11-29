@@ -102,3 +102,17 @@ INSERT INTO CART (id, food_id, volume, count, money) VALUES
 (8, 8, 'Medium', 3, 7500),
 (9, 9, 'Large', 2, 8000),
 (10, 10, 'Small', 7, 21000);
+
+
+INSERT INTO TEST2 (id, phone)
+VALUES
+(1, 'Fruits'),
+(2, 'Vegetables'),
+(3, 'Meat'),
+(4, 'Dairy'),
+(5, 'Bakery'),
+(6, 'Snacks'),
+(7, 'Beverages'),
+(8, 'Condiments'),
+(9, 'Seafood'),
+(10, 'Frozen Food');

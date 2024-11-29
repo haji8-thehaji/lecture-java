@@ -16,4 +16,8 @@ public class MemoService{
     public List<Memo> getAllMemos() { 
         return memoRepository.findAll(Sort.by(Sort.Direction.ASC, "id"));
     }
+    public void addMemo(Memo m1) {
+        memoRepository.save(m1);
+    }
+
 }

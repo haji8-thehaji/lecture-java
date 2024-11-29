@@ -1,22 +1,22 @@
 package com.polytechnics.demo.refrigerator.model.ref.common;
 
-import java.time.Instant;
-import java.util.Date;
-
-import com.polytechnics.demo.refrigerator.model.ref.FoodInventory;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 public interface Food {
 
-    String getId();
+    int getId();
 
+    int getFoodCategoryId();
     String getName();
+    String getImage();
+    int getStandardExpireDay();
+    int getStandardPrice();
+    String getStandardVolume();
+    String getStorageType();
+    int getCustomBool();
+    int getSeasonSpring();
+    int getSeasonSummer();
+    int getSeasonAutumn();
+    int getSeasonWinter();
+    int getCategoryName();
+
 
 }

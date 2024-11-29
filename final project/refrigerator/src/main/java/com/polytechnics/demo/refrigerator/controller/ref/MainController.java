@@ -35,7 +35,7 @@ public class MainController {
 
         if (recipeOptional.isPresent()) {
             Recipe recipe = recipeOptional.get();
-            List<String> steps = mainService.getSteps(recipe.getSteps()); // steps 가공
+            List<String> steps = mainService.getSteps(recipe.getSteps());
             model.addAttribute("recipe", recipe);
             model.addAttribute("steps", steps);
         } else {

@@ -1,5 +1,6 @@
 package com.polytechnics.demo.refrigerator.controller.ref;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +12,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.polytechnics.demo.refrigerator.model.ref.FoodInfo;
 import com.polytechnics.demo.refrigerator.service.ref.ExpireService;
+import com.polytechnics.demo.refrigerator.model.ref.FoodInventory;
+import com.polytechnics.demo.refrigerator.service.ref.FoodInventoryService;
 
 @Controller
 public class ExpireController {
 	@Autowired
-	ExpireService expireService;
+	FoodInventoryService expireService;
 
 	@GetMapping("/expire")
 	public String getExpire(Model model) {
@@ -27,7 +30,7 @@ public class ExpireController {
 	@DeleteMapping("/deleteExpire/{id}")
 	public String deleteExpire(@PathVariable("id") int id) {
 		System.out.println("id = " + id);
-		expireService.deleteExpire(id); // Expire 삭제
+		expireService.deleteFoodInventory(id); // Expire 삭제
 		return "redirect:/expire"; // 삭제 후 리다이렉트
 	}
 }

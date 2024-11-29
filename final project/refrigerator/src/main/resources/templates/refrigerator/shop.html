@@ -243,7 +243,7 @@
   </main>
   
   <!-- 데이터 반복 출력 -->
-  <li id="test" th:each="item : ${foodInfos2}" 
+  <li id="test" th:each="item1 : ${foodInfos2}" 
       class="list-group-item border-0 d-flex justify-content-between align-items-center mb-4 p-4 bg-white shadow-sm border-radius-lg">
     
     <!-- 고정된 촌두부 이미지 -->
@@ -251,7 +251,26 @@
     
     <!-- 제품 정보 출력 -->
     <div class="d-flex flex-column">
-      <h6 class="mb-2 text-sm" th:text="'제품 ID: ' + ${item}">제품 ID</h6>
+      <h6 class="mb-2 text-sm" th:text="${item1[0]}"></h6>
+      <h6 class="mb-2 text-sm" th:text="${item1[1]}"></h6>
+      <h6 class="mb-2 text-sm" th:text="${item1[2]}"></h6>
+      <h6 class="mb-2 text-sm" th:text="${item1[3]}"></h6>
+      <h6 class="mb-2 text-sm" th:text="${item1[4]}"></h6>
+      <h6 class="mb-2 text-sm" th:text="${item1[5]}"></h6>
+      <h6 class="mb-2 text-sm" th:text="${item1[6]}"></h6>
+      <h6 class="mb-2 text-sm" th:text="${item1[7]}"></h6>
+    </div>
+  </li>
+  <!-- 데이터 반복 출력 -->
+  <li id="test" th:each="item2 : ${foodInfoDetails}" 
+      class="list-group-item border-0 d-flex justify-content-between align-items-center mb-4 p-4 bg-white shadow-sm border-radius-lg">
+    
+    <!-- 고정된 촌두부 이미지 -->
+    <img class="w-10 me-3 mb-0" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvr7ChdjGJP6cVqi1uGRULu5RATdRTCRxHfg&s" alt="Product Image">
+    
+    <!-- 제품 정보 출력 -->
+    <div class="d-flex flex-column">
+      <h6 class="mb-2 text-sm" th:text="${item2}"></h6>
     </div>
   </li>
 
